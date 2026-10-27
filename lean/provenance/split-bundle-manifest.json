@@ -1,0 +1,457 @@
+{
+  "source_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "port_manifest": "port-manifest.json",
+  "chunks": [
+    {
+      "module": "UpstreamFoundation",
+      "imports": [
+        "Mathlib",
+        "BernoulliIso.AlgebraicInput"
+      ],
+      "sha256": "65157ea423baa9e611ff98c611997fc620df3f2ecc608c0b5af2c1eea5febf30",
+      "boundaries": [
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.Model",
+          "first_line": 4
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrimeCertificate",
+          "first_line": 22
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.FiniteParameters",
+          "first_line": 37
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedParameters",
+          "first_line": 121
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.LexicographicOrder",
+          "first_line": 188
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.QuotientField",
+          "first_line": 237
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedSubfield",
+          "first_line": 318
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedFields",
+          "first_line": 386
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DirectionSpaces",
+          "first_line": 451
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.ShortIndependence",
+          "first_line": 551
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DirectionFrame",
+          "first_line": 626
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.FrameExistence",
+          "first_line": 827
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.FieldExtensions",
+          "first_line": 884
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.FrameTransport",
+          "first_line": 920
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.ParameterBounds",
+          "first_line": 982
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.FiniteAffine",
+          "first_line": 1037
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.Alteration",
+          "first_line": 1211
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.HoleEvents",
+          "first_line": 1320
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.HoleSelection",
+          "first_line": 1472
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.HoleNumerics",
+          "first_line": 1620
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.HoleExistence",
+          "first_line": 1717
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CyclicLabels",
+          "first_line": 1806
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateRelations",
+          "first_line": 1877
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateClassification",
+          "first_line": 2046
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.LabelSupport",
+          "first_line": 2174
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateGeometry",
+          "first_line": 2269
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateModel",
+          "first_line": 2378
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateCounting",
+          "first_line": 2546
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.ReplacementGeometry",
+          "first_line": 2732
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.OneCandidateCounting",
+          "first_line": 2820
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateDependencies",
+          "first_line": 2988
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CandidateBounds",
+          "first_line": 3130
+        }
+      ]
+    },
+    {
+      "module": "UpstreamConstruction",
+      "imports": [
+        "UpstreamFoundation"
+      ],
+      "sha256": "077242a1da164b7c3baeecc673de3f7d7a4783722176a17887be0400843b45f3",
+      "boundaries": [
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabAvoidance",
+          "first_line": 3
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.EventLoad",
+          "first_line": 569
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabHoleEvents",
+          "first_line": 640
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabEvents",
+          "first_line": 694
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabNumerics",
+          "first_line": 842
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabLoad",
+          "first_line": 914
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.AffineLines",
+          "first_line": 985
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PartialPartition",
+          "first_line": 1070
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabKeys",
+          "first_line": 1198
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabPartition",
+          "first_line": 1292
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.ModelPartition",
+          "first_line": 1443
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabPatch",
+          "first_line": 1585
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PlaneOperators",
+          "first_line": 1698
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SlabAssembly",
+          "first_line": 1730
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.TradeLines",
+          "first_line": 1797
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.TradeFamily",
+          "first_line": 1908
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.TradeDegree",
+          "first_line": 2027
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.TradePolygon",
+          "first_line": 2159
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.ReplacementPolygon",
+          "first_line": 2251
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.ReducedWalks",
+          "first_line": 2401
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.RibbonGeometry",
+          "first_line": 2491
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CycleFactorization",
+          "first_line": 2833
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PartitionMerging",
+          "first_line": 2938
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.EulerBound",
+          "first_line": 3113
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.RibbonRestriction",
+          "first_line": 3197
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.RibbonDetachment",
+          "first_line": 3378
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DetachmentGenus",
+          "first_line": 3566
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PlanarBalance",
+          "first_line": 3763
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BalanceCoarsening",
+          "first_line": 4089
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BalanceDetachment",
+          "first_line": 4223
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BalanceRestriction",
+          "first_line": 4353
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.WeightTransfer",
+          "first_line": 4449
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.VertexMerging",
+          "first_line": 4538
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PlanarDiagrams",
+          "first_line": 4672
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BalanceObstruction",
+          "first_line": 4785
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CycleSplitting",
+          "first_line": 4871
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.RibbonSplitting",
+          "first_line": 4942
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.RibbonSums",
+          "first_line": 5064
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.RibbonWheels",
+          "first_line": 5206
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BoundaryCycles",
+          "first_line": 5339
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CycleSums",
+          "first_line": 5453
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.OpenDiagrams",
+          "first_line": 5562
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DiagramObstruction",
+          "first_line": 5679
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BoundaryFilling",
+          "first_line": 5798
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.BoundarySplitting",
+          "first_line": 5906
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DiagramDeletion",
+          "first_line": 5956
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.WordWheels",
+          "first_line": 6095
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DiagramJoining",
+          "first_line": 6183
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.WordCycles",
+          "first_line": 6242
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DiagramInsertion",
+          "first_line": 6270
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.WordDiagrams",
+          "first_line": 6402
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.WordReduction",
+          "first_line": 6464
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.GluedGroup",
+          "first_line": 6610
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.DiagramReduction",
+          "first_line": 6701
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.GluedWords",
+          "first_line": 6745
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.GroupEmbedding",
+          "first_line": 6823
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.IncidenceCycles",
+          "first_line": 6917
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.TradeGirth",
+          "first_line": 7049
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.Pairing",
+          "first_line": 7148
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.SimplexBound",
+          "first_line": 7440
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedIncidence",
+          "first_line": 7509
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedSearch",
+          "first_line": 7647
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.IncidenceDirections",
+          "first_line": 7724
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.AssignedDevelopment",
+          "first_line": 7845
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedDirections",
+          "first_line": 7960
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CoordinateCharacters",
+          "first_line": 8046
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedSlots",
+          "first_line": 8115
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedPairing",
+          "first_line": 8202
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.PrescribedData",
+          "first_line": 8297
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.MultiHNN",
+          "first_line": 8396
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CharacterIdempotents",
+          "first_line": 8542
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.CharacterTwist",
+          "first_line": 8693
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.AlgebraicPacking",
+          "first_line": 8860
+        },
+        {
+          "module": "OAI.RingTheory.DirectFiniteness.Rectangular",
+          "first_line": 9050
+        }
+      ]
+    },
+    {
+      "module": "CertifiedInput",
+      "imports": [
+        "UpstreamConstruction"
+      ],
+      "sha256": "f250fdf418845218cb8d71dad9ac64beb576fe2a5cea0f4be44146c956ae73ff",
+      "boundaries": []
+    }
+  ]
+}

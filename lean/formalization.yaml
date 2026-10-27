@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: v0.4
+project:
+  name: Finite uniform Bernoulli shifts with unequal base entropy
+  description: >-
+    There exist a countable group G and a nontrivial finite alphabet A such
+    that the ordinary left Bernoulli shifts on A and A times A, equipped
+    with their uniform product probability measures, are equivariantly
+    measure-preservingly isomorphic on invariant conull measurable sets.
+    The inverse is measurable. The finite alphabets have different
+    cardinalities and therefore different uniform base Shannon entropies.
+    The algebraic existence input is supplied by the pinned OpenAI proofs.
+    This formalization does not certify all-base collapse, finitary
+    continuity, the integer coding inputs, or the manuscript's later corollaries.
+  authors: [Peter Burton]
+  responsible_maintainers: [Peter Burton]
+  license: Apache-2.0
+sources:
+  - title: Finitary collapse of Bernoulli shifts from an algebraic splitting
+    authors: [Peter Burton]
+    type: paper
+    relationship: formalizes
+    location: Finite-uniform measurable conjugacy theorem
+    note: >-
+      Accompanying GPT-6 written draft, dated 25 October 2026. This entry
+      refers only to its finite-uniform measurable statement, not its
+      stronger all-base or finitary statements. The note is intended to accompany the released Lean sources as
+      the repository-root bernoulli-iso.pdf; its TeX source is retained at
+      lean/provenance/exposition/bernoulli-iso.tex.
+  - title: A Counterexample to Kaplansky's Direct-Finiteness Conjecture in Characteristic Two
+    authors: [OpenAI]
+    type: paper
+    relationship: adapts
+    id: https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026
+    location: Subgroup averages and a rectangular identity; finite incidence prescription
+    note: >-
+      Supplies the algebraic existence input. Its proof development is
+      imported with a recorded Lean probability-API port; its result is
+      not credited to this project.
+related_formalizations:
+  - id: https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness
+    relationship: builds-on
+    note: Pinned algebraic construction; preserve upstream Apache-2.0 notices and port provenance.
+classification:
+  arxiv: [math.DS, math.GR]
+  msc2020: [37A35, 37A20]
+automation:
+  methods:
+    - method: agent
+      models: [GPT-6 Astra, GPT-6 Sol]
+      framework: Codex
+      tool_setup: >-
+        AI-assisted mathematical writing, Lean implementation, integration,
+        and source review, with human direction. Material assistance included Astra and Sol phases.
+        No exact total cost or elapsed effort is asserted.
+  notes: >-
+    No precise cost or total time is reconstructed. AI systems are credited
+    here rather than listed as human project authors or maintainers.
+review:
+  status: agent-reviewed
+  notes: >-
+    The completed development received local source review and axiom
+    audits. Its packaging received an additional source review. The 27 October
+    2026 revision replaces one monolithic Lucas-Lehmer certificate with opaque
+    checkpoints. Stock NanoDa 0.4.19 accepts the complete revised solution in
+    local macOS testing. This revision has not completed Palomar's hosted Linux
+    preflight or registry intake; no registration or human peer review is claimed.
+    Detailed verification status and reproducible commands are recorded in
+    PALOMAR.md and verification/.
+fidelity:
+  divergences: >-
+    The compared claim must remain the finite-uniform measurable existence
+    statement only. Cardinal inequality records unequal uniform base
+    entropies; no formal entropy classification theorem is claimed.
+    All-base, finitary, finitely presented, and graph formulations are
+    outside this submission's certificate scope.
+acknowledgements: >-
+  OpenAI supplied the upstream algebraic witness. Public partial splitting,
+  residual-factor, random-basis, and approximate-right-inverse approaches
+  are discussed in the accompanying manuscript and novelty report.

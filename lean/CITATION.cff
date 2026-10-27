@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >-
+  Please cite this version of the formal proof/software release when using
+  its Lean certificate. A later research article will be linked separately.
+type: software
+title: Finite-base Bernoulli isomorphism certificate
+version: 0.1.0
+authors:
+  - family-names: Burton
+    given-names: Peter
+    email: peterburton1728@gmail.com
+license: Apache-2.0
+abstract: >-
+  Lean certificate that there exist a countable group G and a nontrivial
+  finite uniform alphabet A for which the ordinary Bernoulli shifts A^G
+  and (A times A)^G are measurably conjugate on invariant conull sets.
+  The algebraic input is supplied by pinned OpenAI proofs. This software
+  release does not certify the manuscript's all-base or finitary extensions.

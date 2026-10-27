@@ -1,0 +1,1471 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,hmargin=1in,top=0.75in,bottom=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,enumitem}
+\usepackage[svgnames]{xcolor}
+\usepackage{framed,thmtools,titlesec,titling,fancyhdr}
+\usepackage{etoolbox}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% Visual conventions from Furstenberg/frozens; document wording is unchanged.
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{0.5\baselineskip plus 2pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\normalfont\sffamily\LARGE\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\sffamily\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\sffamily\Large\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalfont\sffamily\bfseries}{}{0pt}{}
+\pretitle{\begin{center}\sffamily\Huge\bfseries}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}\sffamily\LARGE\lineskip 0.5em\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+\predate{\begin{center}\sffamily\LARGE}
+\postdate{\par\end{center}}
+\thanksmarkseries{arabic}
+\renewenvironment{abstract}
+  {\begin{center}\Large\sffamily\bfseries\abstractname\end{center}\begin{quotation}\sffamily\normalsize\setlength{\parindent}{0pt}}
+  {\end{quotation}}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\sffamily\bfseries\fontsize{11pt}{11pt}\selectfont\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+\pagestyle{plain}
+\AtBeginEnvironment{thebibliography}{\small\raggedright\setlength{\parskip}{0pt}}
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\sffamily\thesection.\arabic{equation}}
+
+\definecolor{gloryred}{HTML}{BB133E}
+\definecolor{gloryblue}{HTML}{2C3ABC}
+\definecolor{glorygreen}{HTML}{24802A}
+\definecolor{topgrey}{HTML}{CFCFCF}
+\definecolor{midgrey}{HTML}{AAAAAA}
+\definecolor{downgrey}{HTML}{828282}
+\newenvironment{statementbar}[1]
+  {\def\FrameCommand{{\color{#1}\vrule width 3pt}\hspace{10pt}}%
+   \MakeFramed{\advance\hsize-\width\FrameRestore}}
+  {\endMakeFramed}
+\declaretheoremstyle[
+  headfont=\sffamily\bfseries,notefont=\sffamily\bfseries,
+  notebraces={}{},headpunct=,bodyfont=\sffamily,
+  headformat=\NAME~\NUMBER:~\NOTE\hfill\smallskip\linebreak,
+  preheadhook=\begin{statementbar}{gloryred},postfoothook=\end{statementbar}
+]{frozensTheorem}
+\declaretheoremstyle[
+  headfont=\sffamily\bfseries,notefont=\sffamily\bfseries,
+  notebraces={}{},headpunct=,bodyfont=\sffamily,
+  headformat=\NAME~\NUMBER:~\NOTE\hfill\smallskip\linebreak,
+  preheadhook=\begin{statementbar}{gloryblue},postfoothook=\end{statementbar}
+]{frozensLemma}
+\declaretheoremstyle[
+  headfont=\sffamily\bfseries,notefont=\sffamily\bfseries,
+  notebraces={}{},headpunct=,bodyfont=\sffamily,
+  headformat=\NAME~\NUMBER:~\NOTE\hfill\smallskip\linebreak,
+  preheadhook=\begin{statementbar}{glorygreen},postfoothook=\end{statementbar}
+]{frozensProposition}
+\declaretheoremstyle[
+  headfont=\sffamily\bfseries,notefont=\sffamily\bfseries,
+  notebraces={}{},headpunct=,bodyfont=\sffamily,
+  headformat=\NAME~\NUMBER:~\NOTE\hfill\smallskip\linebreak,
+  preheadhook=\begin{statementbar}{midgrey},postfoothook=\end{statementbar}
+]{frozensDefinition}
+\declaretheoremstyle[
+  headfont=\sffamily\bfseries,notefont=\sffamily\bfseries,
+  notebraces={}{},headpunct=,bodyfont=\sffamily,
+  headformat=\NAME~\NUMBER:~\NOTE\hfill\smallskip\linebreak,
+  preheadhook=\begin{statementbar}{topgrey},postfoothook=\end{statementbar}
+]{frozensRemark}
+\declaretheorem[name=Theorem,style=frozensTheorem,numberwithin=section]{theorem}
+\declaretheorem[name=Lemma,style=frozensLemma,sibling=theorem]{lemma}
+\declaretheorem[name=Corollary,style=frozensTheorem,sibling=theorem]{corollary}
+\declaretheorem[name=Proposition,style=frozensProposition,sibling=theorem]{proposition}
+\declaretheorem[name=Hypothesis,style=frozensDefinition,sibling=theorem]{hypothesis}
+\declaretheorem[name=Definition,style=frozensDefinition,sibling=theorem]{definition}
+\declaretheorem[name=Remark,style=frozensRemark,sibling=theorem]{remark}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\id}{id}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\reliso}{\mathrel{\cong_{\Omega}}}
+\newcommand{\Binf}{\mathsf B_\infty}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\ev}{\operatorname{ev}}
+\title{Finitary collapse of Bernoulli shifts\\from an algebraic splitting}
+\author{Peter Burton\thanks{\href{mailto:peterburton1728@gmail.com}{\texttt{peterburton1728@gmail.com}}} - GPT-6 written draft.\thanks{Human-facing version to come soon; this manuscript has not been fully human-checked. Please contact author for more information.}}
+\date{25 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a countable group for
+which all nontrivial Bernoulli shifts
+with countable discrete bases are finitarily conjugate, regardless of
+their base entropies. For Polish bases the conjugacies are homeomorphisms
+between invariant conull sets. The core construction turns a specified
+finite-field rectangular splitting into reversible extraction of
+countably many independent coordinates. The main external input is an algebraic existence result in Hypothesis~\ref{hyp:algebra} due to
+OpenAI~\cite{OAI}. \\
+
+Every original coordinate is
+recovered after finitely many stages, and every auxiliary factor is
+explicitly absorbed over one retained finite-base marker. We then combine
+sparse initial data and a cheap marker with relative finitary integer
+coding to treat all bases. The group can be taken to be the direct product
+of the algebraic source group with the lamplighter group. Replacing the
+lamplighter factor by an explicit finitely presented metabelian overgroup
+gives a finitely presented example.
+The core exhaustion argument is self-contained;
+the all-base step uses two stated theorems of Meyerovitch and Spinka.\\
+
+The external algebraic existence input is identified in
+Appendix~\ref{sec:source} and is not reproved here.
+An accompanying Lean certificate establishes the finite-uniform measurable
+conjugacy described below; the all-base and finitary statements in this
+note are beyond the scope of that certificate.
+\end{abstract}
+
+\section{Statement and proof plan}
+
+\paragraph{Attribution and scope.}
+This note develops a dynamical construction from the algebraic data of
+Hypothesis~\ref{hyp:algebra}. The existence of those data is credited to
+OpenAI's characteristic-two construction~\cite{OAI}; the pinned source and
+the exact dependency are recorded in Appendix~\ref{sec:source}.
+The purpose here is to explain how extraction, almost-sure recovery, and
+absorption turn that input into Bernoulli conjugacies, and then to give the
+stronger all-base finitary extension using the stated coding results of
+Meyerovitch and Spinka~\cite{MS}.
+
+\paragraph{Context as of 25 October 2026.}
+For every countably infinite group, Bernoulli shifts with equal base
+Shannon entropy are measurably isomorphic by Seward's theorem~\cite{Seward}.
+The unequal-entropy question is different: Bowen's sofic entropy invariant
+rules out a measurable conjugacy between finite-uniform Bernoulli shifts
+of unequal base entropy over a sofic group~\cite{BowenSofic}.
+Neither equal values of Rokhlin entropy nor factor maps in both directions
+supply the inverse required for a conjugacy.
+
+Related public approaches should also be acknowledged. The Astra research
+archive develops finite defect extraction with a residual factor and a
+conditional random equivariant basis criterion~\cite{Astra}. The
+SauersML group-approximation project gives a conditional route through
+approximate right inverses~\cite{Sauers}. In the versions consulted,
+these approaches leave a residual factor, an unconstructed basis, or an
+additional exactification hypothesis. They contain some antecedents to the
+splitting and extraction strategy.
+
+\paragraph{Formal verification and availability.}
+The Lean build is available in the same GitHub repository as the compiled
+PDF. Its closed finite-uniform certificate constructs a concrete countable
+group and a finite alphabet with more than one symbol, and gives a
+measure-preserving equivariant conjugacy on invariant conull sets between
+the uniform Bernoulli shift on that alphabet and the shift on its square.
+The algebraic witness is imported from the pinned OpenAI proofs. This
+certifies the finite-uniform measurable existence statement; it does not
+certify this note's all-base extension, the integer coding inputs,
+finitary continuity, or the later corollaries. The stronger statements
+are presented here with their written proofs and explicit external
+dependencies.
+
+All groups are countable and discrete. All products carry their product
+Borel structures and the probability measures specified below. An
+\emph{isomorphism of probability-preserving actions}, or \emph{conjugacy},
+means an equivariant measure-preserving bijection between invariant conull
+Borel sets, with measurable inverse.
+
+If $(L,\lambda)$ is a probability space, its Bernoulli $G$-shift is
+$(L^G,\lambda^G)$ with
+\[
+ (a\cdot x)(g)=x(a^{-1}g)\qquad(a,g\in G).
+\]
+The base Shannon entropy of the uniform measure on a finite set of size
+$r$ is $\log r$. All logarithms are natural.
+
+\begin{hypothesis}[The algebraic input]\label{hyp:algebra}
+There are a finite field $K$, a countable group $N$, positive integers
+$d,m,\kappa$, and subgroups $J_1,\ldots,J_d\leq N$ of order $\kappa$,
+where $\kappa\cdot1_K\ne0$, with the following properties. Put
+\[
+ p_v=\kappa^{-1}\sum_{u\in J_v}u\in K[N],
+ \qquad P=\diag(p_1,\ldots,p_d).
+\]
+There are matrices
+\[
+ U\in\Mat_{m\times d}(K[N]),\qquad
+ T\in\Mat_{d\times m}(K[N])
+\]
+such that
+\begin{equation}\label{eq:input}
+ UP=U,\qquad PT=T,\qquad UT=I_m,\qquad d<\kappa m.
+\end{equation}
+Here $K[N]$ is the algebra of finite formal $K$-linear combinations of
+elements of $N$, with multiplication induced by the group law.
+\end{hypothesis}
+
+Write $q=|K|$ and set
+\begin{equation}\label{eq:parameters}
+\begin{gathered}
+ M=\kappa m,\qquad \Delta=M-d>0,
+ \qquad A=\bigoplus_{j\in\ZZ}C_2,\\
+ \Lambda=A\rtimes\langle s\rangle=C_2\wr\ZZ,\qquad
+ D=N\times A,\qquad G=N\times\Lambda.
+\end{gathered}
+\end{equation}
+where $s$ shifts the lamp indices by one. The height homomorphism
+$G\to\ZZ$ kills $D$ and sends $s$ to $1$. In particular,
+$D\cap\langle s\rangle=\{e\}$.
+We regard $N$ and $A$ as the corresponding subgroups of $D$ and then of $G$,
+and fix an enumeration of the lamp indices $\ZZ$.
+
+\begin{definition}[Finitary regularity]\label{def:finitary}
+For Polish probability bases, a conjugacy is \emph{topo-finitary} if it
+is a homeomorphism between invariant conull Borel subsets of the product
+spaces. For countable discrete bases this means that, at almost every
+input, each output label is determined by finitely many input labels,
+in both directions. We call this \emph{finitary}. The finite inspection
+set can depend on the input; no uniform bound or moment bound is required.
+For a nondiscrete output alphabet, continuity does not require an entire
+output value to be determined by finitely many input labels.
+\end{definition}
+
+\begin{theorem}[All-base finitary collapse]\label{thm:all-bases}
+Under Hypothesis~\ref{hyp:algebra}, any two nontrivial Bernoulli $G$-shifts
+with Polish probability bases are topo-finitarily conjugate. In particular,
+any two nontrivial countable-discrete Bernoulli bases give finitarily
+conjugate $G$-shifts, including bases of unequal entropy.
+\end{theorem}
+
+Here nontrivial means that the probability measure is not concentrated at
+one point. All nontrivial standard probability bases are covered
+measurably, since their standard Borel spaces admit Polish realizations.
+The first step is the following explicit finite-uniform construction.
+
+\begin{theorem}\label{thm:main}
+Under Hypothesis~\ref{hyp:algebra}, the following $G$-actions, with uniform
+product measures, are measurably conjugate:
+\begin{equation}\label{eq:main}
+ (K^{d+1})^G\ \cong\ (K^{\NN_{>0}})^G.
+\end{equation}
+Consequently
+\[
+ (K^{d+1})^G\ \cong\ (K^{2(d+1)})^G.
+\]
+The latter two bases are finite and have distinct entropies
+$(d+1)\log q$ and $2(d+1)\log q$.
+\end{theorem}
+
+The external construction in Appendix~\ref{sec:source} supplies
+Hypothesis~\ref{hyp:algebra}. The group in this theorem is an enlargement
+of its group $N$. We make no assertion here that the original group $N$
+has the same conjugacy.
+
+\paragraph{What must be proved.}
+An algebraic splitting will let us repeatedly extract independent
+coordinates. That alone does not ensure invertibility: information might
+remain forever in the unextracted input. We therefore arrange that each
+original coordinate stops depending on that input after finitely many
+stages, almost surely. This is the main argument, in
+Section~\ref{sec:exhaustion}.
+
+Here is the structure of the proof. A single independent marker
+$\Omega=K^G$ supplies fresh random orderings inside each left $D$-coset.
+For every finite $H\leq A$, the algebra gives an exact splitting of $d$
+coordinates per $H$-coset into $M>d$ such coordinates and an auxiliary
+factor. At each stage we enlarge $H$, retain only one packet per larger
+coset, and extract all other packets. We then apply enough algebraic
+splittings to obtain $\Delta$ ordinary Bernoulli coordinates per group
+element. The chance that any prescribed original coordinate still depends
+on the retained input falls by a factor of at least two. After this
+exhaustion, elementary countable-product isomorphisms absorb the auxiliary
+factors.
+
+\section{Coordinates, retained markers, and finite rows}\label{sec:notation}
+
+For a finite subgroup $H\leq A$ and an integer $r\geq1$, define
+\[
+ X_H(r)=(K^r)^{G/H},\qquad
+ X_H(\infty)=(K^{\NN_{>0}})^{G/H},\qquad
+ \Binf=X_{\{e\}}(\infty).
+\]
+The set $G/H$ consists of the left cosets $gH$. A scalar coordinate of
+$X_H(r)$ is indexed by $(gH,i)$, $1\leq i\leq r$. These are compact
+metrizable abelian groups under addition, with their Haar probability
+measures, namely independent uniform $K$-labels. The left $G$-action
+permutes the cosets.
+
+We use the word \emph{packet} for the $r$ scalar labels at one coset.
+Every coset $gH$ is contained in a unique left $D$-coset. A map
+\emph{preserves $D$-cosets} if its output on one such coset uses only
+data in that coset. Marker digits themselves may lie elsewhere; the
+random variables indexed by this $D$-coset will be specified explicitly.
+
+\begin{definition}[Isomorphisms over a marker]\label{def:relative}
+Let $\Omega=K^G$, with uniform product measure $\Prob$, and let $X,Y$ be
+probability-preserving $G$-spaces independent of $\Omega$. The notation
+$X\reliso Y$ means that there is a conjugacy
+\[
+ (\omega,x)\longmapsto(\omega,\phi_\omega(x))
+ \quad\text{from }\Omega\times X\text{ to }\Omega\times Y,
+\]
+where the map and inverse are jointly measurable, and, for almost every
+$\omega$, $\phi_\omega$ carries the probability measure on $X$ to that on
+$Y$. Equivariance means
+\begin{equation}\label{eq:covariance}
+ \phi_{a\omega}(ax)=a\phi_\omega(x)\qquad(a\in G).
+\end{equation}
+The same single marker occurs on both sides.
+\end{definition}
+
+\begin{lemma}[Products over the same marker]\label{lem:relative-products}
+Suppose $X_j\reliso Y_j$ for $j\geq1$. Applying all the fiber maps
+coordinatewise gives $\prod_j X_j\reliso\prod_j Y_j$. These relative
+isomorphisms can also be composed and inverted.
+\end{lemma}
+\begin{proof}
+Intersect the countably many invariant conull sets of allowed markers.
+For each marker in this intersection, the product map is a bijection
+with its coordinatewise inverse. Both are measurable because all
+coordinate maps are measurable. On cylinder sets the product measure is
+preserved, hence it is preserved on the product Borel sigma-algebra.
+Equation~\eqref{eq:covariance} holds coordinatewise. Integrating in
+$\omega$ proves preservation of the full product measure. Composition
+and inversion have the same properties.
+\end{proof}
+
+\begin{definition}[Rows and inverse sections]\label{def:rows}
+A \emph{row} on $X_H(r)$ is a finitely supported linear functional
+\[
+ \ell(x)=\sum_{(b,i)\in F}c_{b,i}x_i(b),
+ \qquad F\subseteq (G/H)\times\{1,\ldots,r\}\text{ finite}.
+\]
+Its support consists of the nonzero coefficients, after collecting terms
+with the same index. A linear map has row bound $C$ if every output
+scalar coordinate is a row with at most $C$ terms. Composing maps of
+row bounds $C_1,C_2$ gives row bound at most $C_1C_2$.
+
+If $\phi:X\to X'\times Y$ is a linear isomorphism, its \emph{inverse
+section for $X'$} is $x'\mapsto\phi^{-1}(x',0)$. It describes the part
+of the old input depending on the new input when the extracted factor
+$Y$ is set to zero. It is not asserted to preserve probability measure.
+\end{definition}
+
+\section{Fresh randomness from one finite-base marker}\label{sec:marker}
+
+Fix a bijection $\beta:K\to\{0,\ldots,q-1\}$ and a bijection
+\[
+ \rho:\NN_{\geq0}\times\NN_{>0}\longrightarrow\NN_{>0}.
+\]
+For $g\in G$ and a stream index $r\geq0$, put
+\begin{equation}\label{eq:uniforms}
+ \xi_g^{(r)}(\omega)
+   =\sum_{j=1}^{\infty}q^{-j}
+          \beta\bigl(\omega(gs^{\rho(r,j)})\bigr).
+\end{equation}
+These are measurable $[0,1]$-valued functions of the marker.
+
+\begin{lemma}\label{lem:marker}
+For each fixed left $D$-coset $C$, the family
+$\{\xi_g^{(r)}:g\in C,\ r\geq0\}$ consists of independent uniform
+random variables on $[0,1]$. Moreover
+\[
+ \xi_{ag}^{(r)}(a\omega)=\xi_g^{(r)}(\omega).
+\]
+\end{lemma}
+\begin{proof}
+Write $C=g_0D$. The elements $g_0us^j$, for $u\in D$ and $j\geq1$,
+are pairwise distinct. Indeed, equality for $(u,j)$ and $(v,k)$ would
+give $v^{-1}u=s^{k-j}$. Applying the height homomorphism gives
+$j=k$, and then $u=v$.
+The digit sequences used in \eqref{eq:uniforms}, for all the indicated
+$(g,r)$, are disjoint sequences of independent uniform digits. A sequence
+of such base-$q$ digits has the uniform distribution on $[0,1]$: each
+interval specified by its first $j$ digits has probability $q^{-j}$,
+and these intervals determine the distribution. This also proves
+independence of the family. The covariance identity follows directly
+from $(a\omega)(ag s^j)=\omega(gs^j)$.
+\end{proof}
+
+For a finite $H\leq A$, give an $H$-coset $b$ the priority
+\begin{equation}\label{eq:priorities}
+ \pi_{H,r}(b)=\min_{g\in b}\xi_g^{(r)}.
+\end{equation}
+Distinct $H$-cosets inside a fixed $D$-coset have independent priorities
+with the same continuous distribution. A finite collection of these
+cosets can therefore be ordered by increasing priority, and every member
+is equally likely to come first. Ordering the individual elements of a
+finite coset uses $H=\{e\}$.
+
+There are only countably many finite subgroups of $A$, cosets, stream
+indices, and pairs of priorities being compared. The event on which all
+these comparisons are tie-free has probability one and is $G$-invariant.
+Call it $\Omega_{\mathrm{ord}}$. For measurability statements on the
+whole probability space, break any ties using a fixed enumeration of the
+countable index sets. This convention has no effect on
+$\Omega_{\mathrm{ord}}$, where every ordering is covariant.
+
+\begin{remark}\label{rem:local-independence}
+The random fields belonging to different left $D$-cosets need not be
+independent. We will never require this. The recovery estimate for a
+coordinate conditions only on earlier streams indexed by its own
+$D$-coset. We also do not condition on the entire marker in that estimate:
+once the marker is fixed, all the selections are fixed.
+\end{remark}
+
+\section{The algebraic splitting on each finite coset space}\label{sec:split}
+
+\subsection{The action of the group algebra}
+
+For $a=\sum_{u\in N}a_u u\in K[N]$, define an operator on $K^{G/H}$ by
+\begin{equation}\label{eq:operator}
+ (\mathcal R_a f)(gH)=\sum_{u\in N}a_u f(guH).
+\end{equation}
+This is well-defined: replacing $g$ by $gh$, $h\in H$, does not change
+$guH$, since $H\leq A$ commutes with $N$. Each sum is finite. Direct
+substitution gives
+\[
+ \mathcal R_a\mathcal R_b=\mathcal R_{ab}.
+\]
+For a matrix $B$ over $K[N]$, use
+$(\mathcal R_B f)_i=\sum_j\mathcal R_{B_{ij}}f_j$.
+These continuous linear operators commute with the left $G$-action,
+preserve $D$-cosets, and respect matrix multiplication. We henceforth
+write the matrices themselves for their operators on $G/H$.
+
+For every $v$, $p_v^2=p_v$. Its image consists exactly of the functions
+constant on each coset of $HJ_v$. The inclusion in this space follows
+by reindexing the subgroup average, and a function already constant
+there is fixed by that average. Because $H\cap J_v=\{e\}$ and the two
+subgroups commute, each $HJ_v$-coset contains exactly $\kappa$
+$H$-cosets. It follows that
+\begin{equation}\label{eq:VH}
+ V_H:=\im(P:X_H(d)\to X_H(d))
+      =\prod_{v=1}^d K^{G/(HJ_v)}.
+\end{equation}
+This identification preserves Haar probability measure.
+
+\begin{lemma}[A split product]\label{lem:algebraic-split}
+Put $Q=P-TU$ and let $Y_H=\im(Q:X_H(d)\to X_H(d))$. Then
+\[
+ V_H\longrightarrow X_H(m)\times Y_H,
+ \qquad v\longmapsto(Uv,Qv)
+\]
+is a continuous linear $G$-equivariant isomorphism, with inverse
+$(y,z)\mapsto Ty+z$. It sends Haar measure to product Haar measure.
+\end{lemma}
+\begin{proof}
+The identities in \eqref{eq:input} give
+\[
+ Q^2=Q,\quad PQ=QP=Q,\quad UQ=0,\quad QT=0.
+\]
+For example, $(TU)^2=TU$, while $PTU=TUP=TU$, so
+$(P-TU)^2=P-TU$ in every characteristic.
+If $v\in V_H$, then $TUv+Qv=Pv=v$.
+Conversely, for $y\in X_H(m)$ and $z\in Y_H$, $Ty+z\in V_H$ and
+\[
+ U(Ty+z)=y,\qquad Q(Ty+z)=z.
+\]
+All maps are continuous because their coordinate formulas are finite.
+The image $Y_H$ is compact, hence closed. A continuous group isomorphism
+between compact groups carries normalized Haar measure to normalized
+Haar measure; Haar measure on a product is the product of the Haar
+measures. This proves the measure assertion.
+\end{proof}
+
+\subsection{Turning subgroup-constant labels into ordinary coset labels}
+
+Take $\kappa$ independent copies of the splitting in
+Lemma~\ref{lem:algebraic-split}. Define the fixed compact $G$-space
+\[
+ Z_H=Y_H^{\kappa},
+\]
+with product Haar measure. Fix a stream index $r$. In each $HJ_v$-coset
+$b$, order its $\kappa$ constituent $H$-cosets as
+$b_1,\ldots,b_\kappa$ by \eqref{eq:priorities}. Define
+\begin{equation}\label{eq:F}
+ F_{H,r,\omega}:V_H^\kappa\longrightarrow X_H(d),
+ \qquad [F_{H,r,\omega}(v)]_v(b_j)=v_v^{(j)}(b).
+\end{equation}
+Thus the label in copy $j$ is placed at the $j$th ordered coset.
+For a fixed marker this is a bijection of scalar coordinate slots,
+hence a continuous linear Haar-preserving isomorphism. Its map and
+inverse are jointly measurable in the marker, and they satisfy
+\eqref{eq:covariance} on $\Omega_{\mathrm{ord}}$.
+
+Combining $F_{H,r,\omega}^{-1}$ with the $\kappa$ copies of the algebraic
+split, and identifying $(X_H(m))^\kappa$ with $X_H(M)$, gives
+\begin{equation}\label{eq:relative-split}
+ X_H(d)\reliso X_H(M)\times Z_H.
+\end{equation}
+Fix the track order in this identification once and for all. Separating
+the first $d$ tracks gives
+\begin{equation}\label{eq:one-step}
+ X_H(d)\reliso X_H(d)\times X_H(\Delta)\times Z_H.
+\end{equation}
+Conditional on the marker, all factors on the right have their product
+Haar law. In particular, the new $X_H(d)$ input is independent of the
+extracted factors. This statement concerns the full split map; its
+inverse section alone does not have this measure property.
+
+\subsection{A uniform finite bound on inverse rows}
+
+Define the finite integer
+\begin{equation}\label{eq:C}
+ C_0=\max\left(1,\max_{1\leq v\leq d}
+                    \sum_{i=1}^m|\supp(T_{vi})|\right).
+\end{equation}
+Let $\widehat T$ apply $T$ separately in the $\kappa$ copies. The inverse
+section for the $X_H(M)$ factor in \eqref{eq:relative-split} is
+\[
+ B_{H,r,\omega}=F_{H,r,\omega}\widehat T.
+\]
+Each row of this map uses at most $C_0$ scalar coordinates: $F$ chooses
+one coordinate in one copy, and that row of $T$ has at most $C_0$ terms.
+Collisions of cosets or cancellation can only reduce this bound. It is
+uniform in $H,r,\omega$.
+
+Let $\iota_d:X_H(d)\to X_H(M)$ insert the input into the first $d$
+tracks, with zero in the other tracks. Then
+\begin{equation}\label{eq:S}
+ S_{H,r,\omega}=B_{H,r,\omega}\iota_d
+\end{equation}
+is the inverse section for the first factor of \eqref{eq:one-step}.
+Iterate that same split $k$ times, each time on its first factor. We
+obtain
+\begin{equation}\label{eq:k-split}
+ X_H(d)\reliso
+ X_H(d)\times X_H(k\Delta)\times Z_H^k.
+\end{equation}
+For a fixed marker its inverse section is $S_{H,r,\omega}^{\,k}$,
+with row bound $C_0^k$. All these maps preserve $D$-cosets, and their
+coefficients on a given $D$-coset depend only on stream $r$ indexed
+by that coset. The same stream may be reused in all $k$ iterations:
+conditional product Haar measure is preserved at each iteration.
+
+\section{Growing finite blocks and recovery of every coordinate}\label{sec:exhaustion}
+
+\subsection{Choose all sizes deterministically}
+
+Let $A_a$ denote the subgroup of $A$ generated by the first $a$ lamps
+in the fixed enumeration, so $|A_a|=2^a$ and $A_0=\{e\}$. Define increasing integers
+$a_n$, finite subgroups $H_n=A_{a_n}$, and row bounds $R_n$ recursively.
+Start with $a_0=0$ and $R_0=1$. Having chosen $a_n$ and $R_n$, choose
+$a_{n+1}>a_n$ so that
+\begin{equation}\label{eq:choose-sizes}
+ L_n:=2^{a_{n+1}-a_n}=[H_{n+1}:H_n]\geq2R_n.
+\end{equation}
+Then set
+\begin{equation}\label{eq:recursion}
+ h_{n+1}=|H_{n+1}|,
+ \qquad k_n=h_{n+1},
+ \qquad R_{n+1}=R_n C_0^{k_n}.
+\end{equation}
+Every choice is finite. The order is important: $R_n$ determines a
+sufficient block size, that size determines $k_n$, and only then do we
+define $R_{n+1}$. There is no requirement to bound $R_{n+1}$ before
+choosing the current block.
+
+\subsection{One stage of the construction}
+
+At stage $n$, the remaining input is $x_n\in X_{H_n}(d)$. Each
+$H_{n+1}$-coset $B$ is a union of $L_n$ cosets of $H_n$. Order them
+using stream $2n$:
+\[
+ b_1(B),\ldots,b_{L_n}(B).
+\]
+Retain the $d$-packet at $b_1(B)$ and extract the other packets in their
+listed order. This is an isomorphism over $\Omega$
+\begin{equation}\label{eq:regroup}
+ X_{H_n}(d)\reliso X_{H_{n+1}}(d)\times W_n,
+ \qquad W_n=X_{H_{n+1}}\bigl(d(L_n-1)\bigr).
+\end{equation}
+The inverse section for its first factor is the insertion map
+\begin{equation}\label{eq:insertion}
+ (I_{n,\omega}v)_i(b)=
+ \begin{cases}
+ v_i(B),& b=b_1(B),\quad b\subset B,\\
+ 0,& b\ne b_1(B),\quad b\subset B.
+ \end{cases}
+\end{equation}
+Each row of $I_{n,\omega}$ has at most one nonzero coefficient.
+
+Next apply \eqref{eq:k-split} to the retained factor, with
+$H=H_{n+1}$, stream $2n+1$, and $k=k_n$. The complete stage is
+\begin{equation}\label{eq:stage}
+ X_{H_n}(d)\reliso X_{H_{n+1}}(d)\times\cY_n,
+ \qquad
+ \cY_n=W_n\times E_n\times Z_{H_{n+1}}^{k_n},
+\end{equation}
+where
+\begin{equation}\label{eq:En}
+ E_n=X_{H_{n+1}}(k_n\Delta)
+     =X_{H_{n+1}}(h_{n+1}\Delta).
+\end{equation}
+Write its fiber map as
+$\phi_{n,\omega}(x_n)=(x_{n+1},y_n)$, with $y_n\in\cY_n$.
+Its inverse section for the new input is
+\begin{equation}\label{eq:stage-section}
+ J_{n,\omega}
+   =I_{n,\omega}S_{H_{n+1},2n+1,\omega}^{\,k_n}.
+\end{equation}
+Composition is read from right to left: the algebraic section acts
+first; insertion into the one selected old packet acts afterwards.
+This map has row bound $C_0^{k_n}$.
+
+\begin{lemma}[A fixed Bernoulli output at every stage]\label{lem:ordinary-output}
+For every $n$, $E_n\reliso X_{\{e\}}(\Delta)$.
+\end{lemma}
+\begin{proof}
+In each $H_{n+1}$-coset $B$, order its $h_{n+1}$ individual group
+elements by their stream-$2n$ values. Regard the $h_{n+1}\Delta$ labels
+at $B$ as $h_{n+1}$ ordered packets of $\Delta$ labels, and place packet
+$j$ at the $j$th element. This is a measurable covariant bijection of
+scalar slots. For every tie-free marker it is a linear homeomorphism
+and preserves uniform product measure.
+\end{proof}
+
+The reuse of stream $2n$ here causes no difficulty: for a fixed marker
+this operation is just a coordinate permutation. Since every full
+stage preserves conditional product Haar measure, the extracted
+ordinary Bernoulli factors are independent of one another, the other
+extracted factors, and the retained marker.
+
+\subsection{The dependence of an original coordinate}
+
+Let $\Pi_{0,\omega}$ be the identity on $X_{H_0}(d)$, and recursively put
+\[
+ \Pi_{n+1,\omega}=\Pi_{n,\omega}J_{n,\omega}.
+\]
+Thus $\Pi_{n,\omega}:X_{H_n}(d)\to X_{H_0}(d)$ is the inverse section
+for the input left after the first $n$ stages, with all extracted
+factors set to zero. For an original scalar coordinate
+$\alpha=(g,i)\in G\times\{1,\ldots,d\}$, define the row
+\begin{equation}\label{eq:ell}
+ \ell_{n,\alpha,\omega}=\ev_\alpha\Pi_{n,\omega}.
+\end{equation}
+The row is zero exactly when that original coordinate no longer depends
+on the remaining input.
+
+Fix this original coordinate and let $C=gD$. Define
+\begin{equation}\label{eq:filtration}
+ \cF_n^C=\sigma\bigl(\xi_u^{(r)}:
+                          u\in C,\ 0\leq r<2n\bigr).
+\end{equation}
+All probability statements in the next lemma are on the original
+marker space $(\Omega,\Prob)$, before restricting to a conull set.
+
+\begin{lemma}[Recovery estimate]\label{lem:recovery}
+The row $\ell_{n,\alpha,\omega}$ has at most $R_n$ nonzero scalar
+coefficients. It is supported on $H_n$-cosets inside $C$, and its
+coefficients are $\cF_n^C$-measurable. Moreover
+\begin{equation}\label{eq:conditional-survival}
+ \Prob\bigl(\ell_{n+1,\alpha,\omega}\ne0\mid\cF_n^C\bigr)
+ \leq \frac{R_n}{L_n}\,
+              \mathbf1_{\{\ell_{n,\alpha,\omega}\ne0\}}
+ \leq \frac12\,
+              \mathbf1_{\{\ell_{n,\alpha,\omega}\ne0\}}
+ \quad\text{almost surely}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The assertions on support and measurability follow by induction.
+At $n=0$ we have the fixed coordinate evaluation, of support size one.
+The section $J_{n,\omega}$ has row bound $C_0^{k_n}$, preserves
+$D$-cosets, and uses only streams $2n$ and $2n+1$ within the relevant
+coset. The recursion \eqref{eq:recursion} therefore gives all three
+assertions at $n+1$. Measurability of a row means measurability of its
+coefficient at each of the countably many possible coordinate indices.
+
+Condition now on $\cF_n^C$. The row $\ell_n=\ell_{n,\alpha,\omega}$
+is fixed. Let $\mathcal S_n$ be the set of $H_n$-cosets on which at
+least one of its coefficients is nonzero. Then
+$|\mathcal S_n|\leq R_n$. By Lemma~\ref{lem:marker}, the stream-$2n$
+priorities within $C$ are independent of $\cF_n^C$. In every
+$H_{n+1}$-coset, the $L_n$ constituent $H_n$-cosets have independent,
+identically distributed continuous priorities. Thus each specified
+$H_n$-coset is selected with conditional probability $1/L_n$.
+
+If no member of $\mathcal S_n$ is selected, then
+$\ell_n I_{n,\omega}=0$ by \eqref{eq:insertion}. In that event
+\[
+ \ell_{n+1,\alpha,\omega}
+   =\ell_n I_{n,\omega}
+          S_{H_{n+1},2n+1,\omega}^{\,k_n}=0,
+\]
+regardless of the second stream or the algebraic spreading. A
+conditional union bound gives $|\mathcal S_n|/L_n$ as an upper bound
+on survival. If $\ell_n=0$, its successor is also zero. Combining these
+facts proves \eqref{eq:conditional-survival}. No independence between
+the selections in different blocks is needed.
+\end{proof}
+
+Taking expectations and iterating gives
+\begin{equation}\label{eq:survival}
+ \Prob(\ell_{n,\alpha,\omega}\ne0)\leq2^{-n}.
+\end{equation}
+The events on the left are decreasing in $n$, because a zero row stays
+zero. Continuity of probability for decreasing events therefore yields
+\[
+ \Prob(\ell_{n,\alpha,\omega}\ne0\text{ for every }n)=0.
+\]
+There are countably many original scalar coordinates. Consequently
+there is a Borel conull set $\Omega_*\subseteq\Omega_{\mathrm{ord}}$
+on which \emph{every} original coordinate row becomes zero at a finite
+stage. All sections are covariant, so the property quantified over all
+coordinates is invariant under $G$. Thus $\Omega_*$ is $G$-invariant.
+
+\subsection{The infinite extraction has a measurable inverse}
+
+\begin{proposition}\label{prop:exhaustion-isomorphism}
+The successive stage maps give an isomorphism over the marker
+\begin{equation}\label{eq:infinite-extraction}
+ X_{H_0}(d)\reliso\prod_{n\geq0}\cY_n.
+\end{equation}
+For every $\omega\in\Omega_*$, the fiber map is a continuous linear
+isomorphism of compact groups.
+\end{proposition}
+\begin{proof}
+Fix $\omega\in\Omega_*$. Starting from $x_0$, recursively apply
+$\phi_{n,\omega}$ to obtain $x_{n+1}$ and $y_n$. Define
+\[
+ \mathcal E_\omega(x_0)=(y_0,y_1,\ldots).
+\]
+This map is linear and continuous: each output coordinate is obtained
+by finitely many continuous stage maps. For every $n$, composing the
+first $n$ stages gives a continuous linear isomorphism
+\begin{equation}\label{eq:finite-prefix}
+ X_{H_0}(d)\longrightarrow
+ X_{H_n}(d)\times\prod_{j<n}\cY_j.
+\end{equation}
+
+\emph{Injectivity.} The inverse of \eqref{eq:finite-prefix} expresses
+each original coordinate as
+\begin{equation}\label{eq:coordinate-recovery}
+ x_0(\alpha)=
+ f_{n,\alpha,\omega}(y_0,\ldots,y_{n-1})
+       +\ell_{n,\alpha,\omega}(x_n),
+\end{equation}
+where $f_{n,\alpha,\omega}$ is a continuous linear function of the
+extracted data. For each $\alpha$ choose a stage with
+$\ell_{n,\alpha,\omega}=0$. That coordinate is then determined by
+the extracted data alone. Hence two inputs with the same infinite
+extraction agree at every coordinate.
+
+\emph{Surjectivity.} The image of $\mathcal E_\omega$ is compact and
+therefore closed in $\prod_n\cY_n$. Its projection onto every finite
+initial product $\prod_{j<n}\cY_j$ is onto, by
+\eqref{eq:finite-prefix}. Every basic open set in the infinite product
+restricts only finitely many factors and is therefore met by the image.
+The image is dense as well as closed, so it is the whole product.
+This proves that $\mathcal E_\omega$ is a compact-group isomorphism,
+and it consequently preserves Haar probability measure.
+
+\emph{Joint measurability of the inverse.} Each coefficient of
+$\ell_{n,\alpha,\omega}$ is measurable in $\omega$. Equality of this
+row to zero is a countable intersection of coefficient equalities,
+and is therefore a Borel event. On $\Omega_*$ define
+\[
+ \tau_\alpha(\omega)
+   =\min\{n\geq0:\ell_{n,\alpha,\omega}=0\}.
+\]
+This is a finite Borel integer-valued function. The inverse coordinate
+is given by the first term of \eqref{eq:coordinate-recovery}, with
+$n=\tau_\alpha(\omega)$. Each fixed-$n$ expression is jointly
+measurable, being part of a finite composition of the stage inverses.
+Partitioning according to the countably many values of $\tau_\alpha$
+proves joint measurability of this coordinate, and hence of the full
+inverse. The forward map is jointly measurable for the same
+finite-stage reason.
+
+Finally all stage maps are covariant, so their infinite extraction and
+its inverse are covariant on $\Omega_*$. Fiberwise preservation of
+Haar measure, integrated against $\Prob$, proves the required
+measure-preserving conjugacy.
+\end{proof}
+
+\section{Absorbing the remaining factors}\label{sec:absorption}
+
+By Lemma~\ref{lem:ordinary-output}, the product of the factors $E_n$
+in \eqref{eq:infinite-extraction} is, over the same marker, the ordinary
+Bernoulli shift $\Binf$: there are countably many sets of $\Delta>0$
+tracks, and a fixed bijection of their indices with $\NN_{>0}$
+interleaves them. Thus
+\begin{equation}\label{eq:with-residuals}
+ X_{H_0}(d)\reliso
+ \Binf\times\prod_{n\geq0}
+       \bigl(W_n\times Z_{H_{n+1}}^{k_n}\bigr).
+\end{equation}
+We now remove the factors on the right by explicit isomorphisms.
+
+\begin{lemma}[Finite-coset coordinate interleaving]\label{lem:interleave}
+For every finite $H\leq A$,
+\[
+ X_H(\infty)\reliso\Binf.
+\]
+Consequently $\Binf\times X_H(r)\reliso\Binf$ for every finite $r$.
+\end{lemma}
+\begin{proof}
+Write $h=|H|$. In each $H$-coset $b$, order its elements as
+$g_1,\ldots,g_h$ using stream $0$. For $x\in X_H(\infty)$, define
+\[
+ y_k(g_i)=x_{h(k-1)+i}(b)
+ \qquad(k\geq1,\ 1\leq i\leq h).
+\]
+This is a covariant permutation of scalar coordinate slots, with its
+explicit inverse given by the same formula read backwards. It is a
+linear Haar-preserving homeomorphism for each allowed marker and is
+jointly measurable in both directions. On $X_H(\infty)$, one can
+interleave any additional $r$ tracks with the countably many existing
+ones using a fixed bijection $\NN_{>0}\sqcup\{1,\ldots,r\}\to\NN_{>0}$.
+Conjugating that operation by the first isomorphism proves the second.
+\end{proof}
+
+\begin{lemma}[Absorption of an algebraic remainder]\label{lem:absorb-Z}
+For every finite $H\leq A$ and every finite integer $k\geq1$,
+\[
+ \Binf\times Z_H^k\reliso\Binf.
+\]
+\end{lemma}
+\begin{proof}
+Take countably many copies of \eqref{eq:relative-split}, using the same
+marker and, for example, stream $0$ for every copy. By
+Lemma~\ref{lem:relative-products} this gives
+\[
+ (X_H(d))^{\NN_{>0}}\reliso
+ (X_H(M))^{\NN_{>0}}\times Z_H^{\NN_{>0}}.
+\]
+Since $d,M\geq1$, fixed track interleavings identify each of the first
+two countable products with $X_H(\infty)$. Lemma~\ref{lem:interleave}
+therefore supplies an isomorphism
+\begin{equation}\label{eq:absorb-countable}
+ \theta_H:\Binf\reliso\Binf\times Z_H^{\NN_{>0}}.
+\end{equation}
+To absorb $k$ more copies, use the following composition, throughout
+over the same marker:
+\[
+ \Binf\times Z_H^k
+ \xrightarrow{\theta_H\times\id}
+ \Binf\times Z_H^{\NN_{>0}}\times Z_H^k
+ \xrightarrow{\text{interleave}}
+ \Binf\times Z_H^{\NN_{>0}}
+ \xrightarrow{\theta_H^{-1}}\Binf.
+\]
+The middle arrow is a permutation of the copies of the \emph{same}
+probability-preserving action $Z_H$. This is an actual isomorphism;
+no cancellation of factors is being inferred.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{thm:main}]
+First split the countably many scalar tracks of $\Binf$ into countably
+many infinite sets. This identifies $\Binf$ with a countable product
+of independent copies of itself. Allocate one copy to each $W_n$ and
+one to each $Z_{H_{n+1}}^{k_n}$. Lemma~\ref{lem:interleave} absorbs
+$W_n=X_{H_{n+1}}(d(L_n-1))$ into its allocated copy, and
+Lemma~\ref{lem:absorb-Z} absorbs $Z_{H_{n+1}}^{k_n}$ into the other
+allocated copy. Taking the product of these isomorphisms over the
+single marker, then interleaving the resulting countable family of
+$\Binf$ factors, yields
+\begin{equation}\label{eq:all-absorption}
+ \Binf\times\prod_{n\geq0}
+       \bigl(W_n\times Z_{H_{n+1}}^{k_n}\bigr)
+       \reliso\Binf.
+\end{equation}
+Combining \eqref{eq:with-residuals} and \eqref{eq:all-absorption} proves
+$X_{H_0}(d)\reliso\Binf$. Restoring the retained marker gives
+\[
+ (K^{d+1})^G
+     =\Omega\times X_{H_0}(d)
+     \cong\Omega\times\Binf
+     \cong\Binf.
+\]
+The final arrow interleaves the single marker coordinate with the
+countably many data coordinates at each group element. This proves
+\eqref{eq:main}.
+
+Let $\Phi:(K^{d+1})^G\to\Binf$ denote this conjugacy. Then
+\[
+ (K^{2(d+1)})^G
+ \cong (K^{d+1})^G\times(K^{d+1})^G
+ \xrightarrow{\Phi\times\Phi}\Binf\times\Binf
+ \xrightarrow{\text{interleave}}\Binf
+ \xrightarrow{\Phi^{-1}}(K^{d+1})^G
+\]
+is the required conjugacy of two finite-base shifts. Since $q\geq2$
+and $d\geq1$, their stated Shannon entropies are positive and unequal.
+\end{proof}
+
+\section{Sparse initial data and finitary regularity}\label{sec:sparse-finitary}
+
+The construction above has two useful freedoms: its initial finite
+subgroup need not be trivial, and its marker need not be uniform.
+We record both, including the joint continuity needed below.
+
+Fix $0<p<1$, let $\nu_p$ assign probabilities $p,1-p$ to $0,1$, and
+write $\Omega_p=(\{0,1\}^G,\nu_p^G)$. In this section relative
+isomorphisms retain $\Omega_p$ instead of the uniform marker.
+Set
+\[
+ \epsilon_p=-p\log p-(1-p)\log(1-p).
+\]
+
+\begin{lemma}[Sparse-start relative exhaustion]\label{lem:sparse-start}
+For every $a\geq0$ and $H=A_a$, there is a topo-finitary conjugacy
+\[
+ \Omega_p\times X_H(d)\ \cong\ \Omega_p\times\Binf
+\]
+which fixes the marker. For each allowed marker its data map is a
+linear homeomorphism of compact groups preserving Haar measure.
+\end{lemma}
+\begin{proof}
+First supply the random streams. In each disjoint digit column used in
+Section~\ref{sec:marker}, group successive biased bits into pairs.
+Discard $00$ and $11$, and read $01$ and $10$ as fair bits $0$ and $1$.
+An accepted pair occurs with probability $2p(1-p)>0$, independently
+between pairs. Almost surely infinitely many are accepted. Conditional
+on their positions, the accepted bits are independent and fair, so
+they remain so after forgetting the positions. Their binary expansion
+is uniform on $[0,1]$. Disjoint input columns give independent streams
+inside each fixed $D$-coset. Covariance is unchanged.
+
+Every prescribed finite prefix of accepted bits requires finitely
+many original bits. The binary-expansion map is continuous.
+Thus a finite collection of strict priority comparisons is certified
+by finitely many marker coordinates. Intersect the countably many
+events of infinite acceptance and absence of ties to obtain an
+invariant conull marker set.
+
+Start the recursion of Section~\ref{sec:exhaustion} at $a_0=a$,
+$H_0=H$, $R_0=1$. An original coordinate is now $(gH,i)$.
+Its initial row still has one coefficient, supported in $gD$.
+Choose $L_n\geq2R_n$ exactly as before and keep
+$k_n=|H_{n+1}|$. This is the absolute subgroup order, not the
+relative index $[H_{n+1}:H_n]$. Therefore
+Lemma~\ref{lem:ordinary-output} still extracts $\Delta$ ordinary
+$G$-tracks at each stage. All row estimates, compactness,
+measurability, and absorption arguments apply without another change.
+They give the asserted relative measurable compact-group isomorphism.
+
+It remains to check joint continuity, including in the marker.
+For a fixed finite stage and output scalar, expand its formula into
+its full finite computation tree. Each algebraic operator has finite
+support; each ordering concerns a finite coset. At the given marker,
+finitely many strict comparisons determine every coordinate index in
+this tree. Their finite certificates freeze all its branches. The
+entire linear row, before collecting terms or cancellations, is then
+fixed. This proves continuity of every finite-stage coordinate map,
+both forward and backward, on the tie-free domain.
+
+For an inverse coordinate $\alpha$, choose any stage $n$ at which
+$\ell_{n,\alpha,\omega}=0$. Freeze the finite tree of this whole row,
+not just the terms which survive cancellation. The same row is zero
+for every allowed marker in that neighborhood. Freeze also the finite
+tree of the recovery function $f_{n,\alpha,\omega}$ in
+\eqref{eq:coordinate-recovery}. On this neighborhood the inverse
+coordinate is one fixed finite linear function of extracted data.
+It is therefore continuous. The first vanishing stage need not be
+locally constant: the single chosen witness stage suffices.
+
+Finally, the absorption maps of Section~\ref{sec:absorption} are
+coordinate permutations and countable products of finite compositions
+of elementary splits and their inverses. Each requested coordinate
+uses only one such finite composition. There is no infinite recursive
+application along one coordinate. Consequently these maps and their
+inverses are jointly continuous on the common invariant conull
+domain. Their composition with extraction proves the lemma.
+\end{proof}
+
+\section{From sparse data to every Bernoulli base}\label{sec:all-bases}
+
+We now use two precise inputs from integer finitary coding.
+For a probability base $\lambda$, write $H(\lambda)$ for its Shannon
+entropy, equivalently the supremum of the entropies of its finite
+measurable partitions. This is the sum of $-t\log t$ over its atoms
+when it is purely atomic, and is infinite if it has a nonatomic part.
+
+\begin{lemma}[Integer coding inputs]\label{lem:integer-coding}
+The following consequences of Meyerovitch--Spinka~\cite{MS} will be used.
+\begin{enumerate}[label=(\roman*)]
+\item Equal-entropy iid integer processes with Polish bases admit a
+topo-finitary conjugacy, also when their entropy is infinite.
+\item Let $W$ be iid Bernoulli-$\theta$ on $\mathbb Z$, $0<\theta<1$.
+Given $W$, let $X_n$ independently be uniform on $K^d$ when $W_n=1$
+and the fixed symbol $*$ otherwise. If a finite probability base
+$\lambda$ has entropy $\theta d\log q$, then $(W,X)$ is finitarily
+isomorphic over $W$ to $W$ times an independent iid $\lambda$ process.
+\end{enumerate}
+\end{lemma}
+\begin{proof}[Identification of the cited inputs]
+Part (i) is \cite[Theorem 3.15]{MS}.
+For (ii), apply \cite[Theorem 3.2]{MS}. Both compared processes are
+conditionally independent over the aperiodic ergodic process $W$,
+with relative entropy $\theta d\log q$. Their conditional laws on
+any finite set are determined by the corresponding finite $W$-block.
+Thus the theorem's relative dependence bound is zero and its
+stop-finitary conditional-law hypothesis holds. Its relative
+isomorphism fixes $W$. We use the resulting bijection, not only a
+factor map.
+\end{proof}
+
+\begin{remark}[Keeping the topology of a Polish base]
+The topological reduction underlying part (i) can be made explicit.
+For a Polish probability space $(L,\lambda)$, choose a countable
+metric-ball basis $(U_j)$ with $\lambda(\partial U_j)=0$.
+This is possible because, at each center in a countable dense set,
+only countably many spheres have positive measure.
+The set $L_0=L\setminus\bigcup_j\partial U_j$ is conull and $G_\delta$.
+Each $U_j\cap L_0$ is clopen in $L_0$. Consequently
+$x\mapsto(\mathbf1_{U_j}(x))_j$ is a homeomorphism of $L_0$ onto
+its image in $\{0,1\}^{\NN}$: the basis separates points and also
+makes the inverse continuous. This realizes a conull part of the
+original topology without replacing it by a discrete topology.
+The integer coding assertion itself remains the cited theorem.
+\end{remark}
+
+The next elementary observation lets us apply integer coding along
+the left cosets $g\langle s\rangle$, parametrized by right multiplication
+by powers of $s$.
+
+\begin{lemma}[Extension from a subgroup]\label{lem:coinduce}
+If two Bernoulli shifts over a countable subgroup $B\leq\Gamma$
+are topo-finitarily conjugate, their Bernoulli shifts over $\Gamma$
+are topo-finitarily conjugate. Finitary conjugacy of discrete bases
+is preserved as well.
+\end{lemma}
+\begin{proof}
+Apply the same $B$-equivariant code on every left coset $gB$,
+identified with $B$ by $b\mapsto gb$. Changing this identification
+by a left translation in $B$ does not change the output, by
+$B$-equivariance. Left translation by $\Gamma$ carries these
+cosetwise rules to one another, so the result is $\Gamma$-equivariant.
+Different cosets have independent product laws. Thus the product of
+the codes preserves probability and has the product of their inverses.
+Intersect the countably many good coset domains and their translates.
+The resulting domain is invariant and conull. Product continuity
+gives topo-finitary regularity; a discrete output reads a finite
+set in its one coset.
+\end{proof}
+
+\begin{lemma}[Finitary sparse-label homogenization]\label{lem:sparse-code}
+Let $H=A_a$ have order $h\geq2$. There is a finite probability base
+$(L_H,\lambda_H)$ with $H(\lambda_H)=d\log q/h$ and a finitary
+conjugacy over $\Omega_p$
+\[
+ \Omega_p\times X_H(d)\ \cong\
+ \Omega_p\times(L_H,\lambda_H)^G .
+\]
+\end{lemma}
+\begin{proof}
+Write $A=H\oplus A'$ and choose distinct $a_j\in A'$, $j\geq1$.
+Obtain a uniform priority $\eta_g$ from the biased marker sequence
+$(\omega(ga_j))_{j\geq1}$ using the pair extractor from
+Lemma~\ref{lem:sparse-start}. For a fixed coset $gH$, the coordinates
+$gh_0a_j$, $h_0\in H$, $j\geq1$, are distinct. Hence its $h$
+priorities are independent uniforms. Select their unique minimum.
+Call the selected set $S_H(\omega)$. It is covariant, has exactly one
+element in every $H$-coset, and selects each fixed element with
+probability $1/h$. Each selection has a finite marker certificate
+because the finite collection of priorities has a strict gap.
+
+Store a coset label only at its selected representative:
+\[
+ w(g)=
+ \begin{cases}
+ x(gH),&g\in S_H(\omega),\\
+ *,&g\notin S_H(\omega).
+ \end{cases}
+\]
+This is a relative finitary bijection to its constrained image:
+recover $x(gH)$ by finding the selected element in the finite coset.
+Given the whole marker, the labels at selected elements are
+independent uniform $K^d$-labels.
+
+On each line $g\langle s\rangle$ define
+\[
+ W^g_n=\mathbf1_{\{gs^n\in S_H(\omega)\}},\qquad
+ X^g_n=w(gs^n)\quad(n\in\mathbb Z).
+\]
+The coordinates determining $W^g_n$ belong to $gs^nD$.
+These $D$-cosets have different integer heights for different $n$.
+Therefore $W^g$ is iid Bernoulli-$1/h$.
+Given $W^g$, the variables $X^g_n$ have exactly the sparse product
+law in Lemma~\ref{lem:integer-coding}(ii).
+
+Choose a finite base of entropy $c_H=d\log q/h$. Such a base exists
+for every finite $c_H$: on a sufficiently large finite alphabet,
+entropy varies continuously from zero to the logarithm of its size.
+Let $(W,X)\mapsto(W,\varphi_W(X))$ be the relative integer code
+from Lemma~\ref{lem:integer-coding}(ii), and set
+\[
+ z(g)=\varphi_{W^g}(X^g)_0 .
+\]
+Integer equivariance makes this a consistent rule on each line,
+independent of its chosen origin. Left $G$-translation carries
+the inputs and lines covariantly to one another, so the rule is
+$G$-equivariant.
+
+Here the full conditional law deserves attention. Fix the entire
+marker. Every selected position uses a distinct original $H$-coset
+label. Consequently the sparse label processes on different lines
+are independent under this conditional law, although the lines'
+marker processes can be correlated. By disintegration of the
+integer isomorphism, for almost every $W$ the fiber code and its
+inverse preserve the specified conditional probability laws.
+Almost every marker makes every line good, since there are
+countably many lines and each $W^g$ has the required iid marginal.
+The product of these fiber codes has conditional output law
+$\lambda_H^G$, independent of the full marker.
+
+Invert separately on each line, then recover the coset labels.
+The joint law and inverse just verified prove a conjugacy over the
+entire marker. Each integer output reads finitely many sparse
+labels and selection indicators. Each indicator has a finite
+marker certificate. A finite union of these inspection sets is
+finite. The inverse satisfies the same argument. Countable
+intersection of the good domains makes them invariant and conull.
+No independence from the exhaustion streams is needed: both
+conjugacies fix the marker and preserve each conditional data law.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:all-bases}]
+Combine Lemmas~\ref{lem:sparse-start} and~\ref{lem:sparse-code} to obtain
+\[
+ V_{p,H}^G\cong_{\rm tf}\Omega_p\times\Binf,\qquad
+ V_{p,H}=(\{0,1\}\times L_H,\nu_p\times\lambda_H),
+\]
+where
+\[
+ H(V_{p,H})=\epsilon_p+\frac{d\log q}{|H|}.
+\]
+This positive finite entropy can be made arbitrarily small by
+taking $p$ small and $H$ large.
+
+The Polish bases of $\Omega_p\times\Binf$ and $\Binf$ both have
+infinite entropy. Apply Lemma~\ref{lem:integer-coding}(i) and then
+Lemma~\ref{lem:coinduce} with $B=\langle s\rangle$ to obtain
+\[
+ V_{p,H}^G\cong_{\rm tf}\Binf. \tag{*}
+\]
+This use of integer coding retains topology; an arbitrary nonatomic
+measure-space isomorphism would not suffice.
+
+Now let $(L,\lambda)$ be a nontrivial Polish probability base and
+write $b=H(\lambda)\in(0,\infty]$. If $b=\infty$, the same
+equal-entropy integer coding and extension immediately give
+$L^G\cong_{\rm tf}\Binf$.
+If $b<\infty$, choose $V=V_{p,H}$ with entropy $a<b$, and a finite
+base $R$ of entropy $b-a$. Equal-entropy integer coding, its
+extension to $G$, the conjugacy $(*)$, and one more
+infinite-entropy integer coding give
+\[
+ L^G\cong_{\rm tf}(V\times R)^G
+     \cong_{\rm tf}\Binf\times R^G
+     \cong_{\rm tf}\Binf .
+\]
+All good domains can be restricted to invariant conull Borel sets,
+and compositions are taken on the preimages of these sets.
+Compose the code for one base with the inverse code for the other
+to prove the theorem. When both bases are countable and discrete,
+continuity of each output label means constancy on a finite
+cylinder neighborhood in the conull domain. Thus the final
+conjugacy is finitary, even if intermediate alphabets were
+nondiscrete.
+\end{proof}
+
+\section{Finitely presented groups and a graph formulation}\label{sec:graph}
+
+Lemma~\ref{lem:coinduce} transfers the all-base conclusion to every
+countable overgroup of $G$. For the algebraic source in
+Appendix~\ref{sec:source}, $N$ is finitely presented. We can preserve a
+direct-product construction while making the auxiliary factor finitely
+presented. Consider the fixed group
+\[
+ B=\langle a,u,t\mid
+ a^2=1,\ [a,a^t]=1,\ [u,t]=1,\ a^u=aa^t\rangle,
+\]
+where $x^y=y^{-1}xy$ and $[x,y]=x^{-1}y^{-1}xy$.
+This familiar metabelian overgroup of the lamplighter group appears in
+Cleary--Riley~\cite{CR}. We give the required facts explicitly.
+
+\begin{lemma}\label{lem:metabelian-stabilizer}
+The finitely presented group $B$ is metabelian and contains
+$C_2\wr\ZZ$ as the subgroup generated by $a,t$.
+\end{lemma}
+\begin{proof}
+Write $a_j=a^{t^j}$. We first prove $[a_i,a_j]=1$ for all integers
+$i,j$. Conjugating by powers of $t$ reduces this to nonnegative
+distances $j-i$. Distances zero and one follow from the presentation.
+Suppose the claim holds through distance $n\geq1$. Conjugating
+$[a_0,a_n]=1$ by $u$ gives
+$[a_0a_1,a_na_{n+1}]=1$, since $u$ commutes with $t$.
+Every commutator between these four elements except possibly
+$[a_0,a_{n+1}]$ is already trivial. Cancelling the other factors
+therefore gives $[a_0,a_{n+1}]=1$. Induction proves the claim.
+Thus $A_0=\langle a_j:j\in\ZZ\rangle$ is abelian of exponent two.
+
+The relation $a_j^u=a_ja_{j+1}$ shows that conjugation by every
+nonnegative power of $u$ carries each $a_j$ into $A_0$.
+For any two elements $a^{u^i t^j}$, simultaneously conjugate by a
+sufficiently large power of $u$ to make both $u$-exponents
+nonnegative. Their images lie in $A_0$ and commute, so the original
+pair commutes. The subgroup generated by all these conjugates is
+therefore abelian. It is normal under $u,t$ and contains $a$,
+so is the normal closure of $a$. The quotient is $\ZZ^2$.
+This proves that $B$ is metabelian, and hence amenable.
+
+It remains to exclude extra relations among $a,t$. Over the rational
+function field $\mathbb F_2(z)$, the matrices
+\[
+ a\longmapsto\begin{pmatrix}1&1\\0&1\end{pmatrix},\qquad
+ t\longmapsto\begin{pmatrix}z^{-1}&0\\0&1\end{pmatrix},\qquad
+ u\longmapsto\begin{pmatrix}(1+z)^{-1}&0\\0&1\end{pmatrix}
+\]
+satisfy all four defining relations. They send $a_j$ to
+$\left(\begin{smallmatrix}1&z^j\\0&1\end{smallmatrix}\right)$.
+Distinct Laurent monomials are linearly independent over
+$\mathbb F_2$, and the diagonal entry detects each power of $t$.
+Thus the homomorphism from the lamplighter presentation into
+$\langle a,t\rangle$ is injective as well as onto.
+\end{proof}
+
+\begin{corollary}\label{cor:fp}
+For the finitely presented algebraic source $N$, the explicit direct
+product $N\times B$ has the all-base conclusions of
+Theorem~\ref{thm:all-bases}. Here $B$ is a fixed finitely presented
+amenable group, independent of $N$. There is also a two-generator
+finitely presented group $\Gamma$ with these conclusions.
+\end{corollary}
+\begin{proof}
+The direct product $N\times B$ is finitely presented and contains
+$N\times\Lambda$. Apply Lemma~\ref{lem:coinduce}.
+Theorem IV of Higman--Neumann--Neumann~\cite{HNN}, including its
+finite-relator conclusion, embeds $N\times B$ in a two-generator
+finitely presented group $\Gamma$. Apply the same lemma again.
+\end{proof}
+
+The group $\Gamma$ is not virtually abelian: it contains the finite
+lamp groups $C_2^n$ for all $n$, so its finite subgroups have unbounded
+orders. A finitely generated virtually abelian group has a
+torsion-free abelian subgroup of finite index, and each finite
+subgroup injects into the set of its cosets. Its finite subgroups
+therefore have uniformly bounded orders, a contradiction.
+Leemann--de la Salle~\cite[Theorem 1.1]{LdS} therefore supplies a
+finite-degree Cayley graph $\mathcal G$ of $\Gamma$ whose full
+automorphism group is exactly its left translation group.
+
+\begin{corollary}\label{cor:graph}
+There is a connected locally finite vertex-transitive graph
+$\mathcal G$ on which all nontrivial iid vertex-label processes
+with countable discrete bases are finitarily conjugate under
+$\operatorname{Aut}(\mathcal G)$. In particular this holds for
+every two independent site-percolation processes with parameters
+strictly between zero and one.
+\end{corollary}
+\begin{proof}
+Apply Corollary~\ref{cor:fp} on the graphical regular representation
+just described. Every finite inspection set lies in a finite
+graph ball, so the codes have almost surely finite coding radii.
+\end{proof}
+
+The coding can change the geometry of occupied clusters. No
+monotonicity, deterministic radius bound, or integrable radius
+bound is asserted. For a discrete-valued finitary factor of an iid
+process with a countable discrete base, composition with the source
+conjugacy gives a finitary realization from Bernoulli-$p$ bits for
+every $0<p<1$. The same holds for a topo-finitary discrete-valued
+factor of a Polish-base iid process, by composition of continuous maps.
+This converts the entire source reversibly before taking the
+given factor; it does not supply an inverse to an arbitrary factor.
+
+The distinction is relevant to the factor-of-iid viewpoint in
+Lyons~\cite{Lyons}. Mutual Bernoulli factor maps are already known
+for every countable nonamenable group by Bowen~\cite{Bowen}.
+Here recovery of every input coordinate gives the additional
+two-sided conclusion.
+
+\section{What the construction uses}\label{sec:scope}
+
+The auxiliary group $\Lambda=C_2\wr\ZZ$ is fixed independently of the
+algebraic input. It is metabelian, hence amenable. The proof uses its
+finite lamp subgroups and the height homomorphism; it does not require
+a free-product factor. More generally, the same formulas work in any
+countable ambient group containing $D=N\times A$ and an infinite-order
+element $s$ with $D\cap\langle s\rangle=\{e\}$. This intersection condition
+gives both marker-address injectivity and disjointness of the $D$-cosets
+along each $s$-line. No step requires the $H_n$ to be normal in the
+ambient group.
+
+In the finite-uniform engine, the retained marker contributes exactly
+one uniform $K$-coordinate per element of $G$. Its apparent abundance
+of randomness inside a $D$-coset
+comes from the disjoint marker coordinates indexed by $us^j$.
+No independent infinite-base $G$-Bernoulli system is included in the
+input.
+
+The remaining input has $d$ coordinates per $H_n$-coset. Its coordinate
+density per group element is $d/|H_n|$, which tends to zero. This
+decreasing density makes recovery of every coordinate possible even when the inverse
+rows have very large finite supports. The choice $k_n=|H_{n+1}|$ offsets
+the decreasing density in the extracted Bernoulli factor: each stage
+still contributes $\Delta$ ordinary tracks.
+
+The finite groups $H_n$ have orders that may vanish in $K$. We never
+average over them. They are used only for finite partitions, orderings,
+and coordinate permutations. The only subgroup averages are over the
+$J_v$, whose order is invertible by hypothesis.
+
+The core finite-uniform construction uses no entropy classification.
+The all-base extension uses precisely the two integer finitary-coding
+inputs in Lemma~\ref{lem:integer-coding}. No assertion that zero
+Rokhlin entropy alone implies Bernoulli isomorphism is needed.
+Continuity is asserted on invariant conull sets. A continuous
+conjugacy between the entire two-symbol and four-symbol full shifts
+is impossible: it would biject their group-fixed configurations,
+of which there are respectively two and four.
+
+\appendix
+\section{The precise external algebraic dependency}\label{sec:source}
+
+The algebraic existence input is due to OpenAI. We use \cite{OAI},
+\emph{A Counterexample to Kaplansky's Direct-Finiteness Conjecture in
+Characteristic Two}, manuscript dated September 23, 2026. We use its
+rectangular construction before the subsequent packing into a scalar
+one-sided inverse. The implication proved above requires the actual
+data of Hypothesis~\ref{hyp:algebra}, not merely an abstract failure of
+direct finiteness.
+
+The source's subsection ``Subgroup averages and a rectangular identity''
+constructs a countable group $N$ with embedded subgroups, denoted there
+by $K_v$, each of order $\kappa=\ell^2$ for an odd prime $\ell$.
+Rename them $J_v$ here. Its field $K$ is finite of characteristic two,
+so $\kappa$ is invertible. With source vectors $x_v\in K^m$, its matrices
+are
+\[
+ U_{i,v}=-\kappa(x_v)_i p_v,
+ \qquad T_{v,i}=p_v(x_v)_i.
+\]
+The displayed rectangular identities in that subsection are
+$UP=U$, $PT=T$, and $UT=I_m$. The source's number $t$ of local subgroups
+is our $d$. These formulas also give $C_0\leq\kappa m$ in
+\eqref{eq:C}, although our proof needs only finiteness of $C_0$.
+
+The strict inequality needed here is slightly stronger than the weak
+inequality displayed in the source's incidence criterion. It follows
+from its terminating prescription. Write $Q_0$ for the number of affine
+points in that prescription. The selected parameters satisfy
+\[
+ m\geq\frac{2Q_0}{(\ell+1)^2},\qquad d=Q_0-m.
+\]
+Consequently
+\[
+ m(\ell^2+1)
+ \geq \frac{2(\ell^2+1)}{(\ell+1)^2}Q_0
+ >Q_0,
+\]
+because
+$2(\ell^2+1)-(\ell+1)^2=(\ell-1)^2>0$.
+Rearranging gives $d<\ell^2m=\kappa m$, as required.
+
+Thus the cited existence construction supplies all of
+Hypothesis~\ref{hyp:algebra}, and Theorem~\ref{thm:main} applies to its
+data. The existence of that incidence construction and the embedding
+of its local groups are the external results invoked here. This note
+does not reproduce their proofs or independently certify a formal
+verification of them. Every subsequent operator, probability,
+exhaustion, and absorption argument is given in the body of this note.
+
+The same source's local-group embedding construction gives a finite
+presentation of this $N$: it has finitely many generators and the finitely
+many local multiplication-table relations of length at most three.
+Corollary~\ref{cor:fp} uses this finite presentation, together with the
+classical embedding theorems cited there.
+
+\begin{remark}[The algebraic input can be binary]\label{rem:binary}
+For a characteristic-two instance of Hypothesis~\ref{hyp:algebra},
+let $f=[K:\mathbb F_2]$. Choose an $\mathbb F_2$-basis of $K$ and
+represent multiplication by each field element as an $f$-by-$f$
+binary matrix. Applying this representation to every coefficient
+gives a unital algebra homomorphism
+$K[N]\to\Mat_f(\mathbb F_2[N])$. Expanding $U,T,P$ into blocks
+therefore preserves their three identities. Each average $p_v$
+has coefficients in $\mathbb F_2$ because $\kappa$ is odd, so its
+block is $p_v I_f$. The expanded diagonal averages correspond to
+repeating each $J_v$ exactly $f$ times. The new dimensions are
+$d'=fd$, $m'=fm$, and $d'<\kappa m'$ still holds.
+Thus the construction may be carried out with binary data.
+\end{remark}
+
+\begin{thebibliography}{99}
+\bibitem{OAI}
+OpenAI,
+\emph{A Counterexample to Kaplansky's Direct-Finiteness Conjecture in
+Characteristic Two}, manuscript dated September 23, 2026.
+\href{https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026}{Manuscript and source files}.
+The source revision is \texttt{adc7f1241b42e322a6451854ab7e4b4c146bf78a}.
+The specific source passages used here are
+\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/build/sections/02-criterion.tex}{\texttt{02-criterion.tex}},
+subsection ``Subgroup averages and a rectangular identity'', and
+\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/build/sections/05-prescription.tex}{\texttt{05-prescription.tex}},
+subsection ``Finite search for the incidence data''; and
+\href{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/build/sections/02a-embedding.tex}{\texttt{02a-embedding.tex}},
+for the local subgroup embeddings and finite presentation.
+Accessed October 25, 2026.
+\bibitem{MS}
+T. Meyerovitch and Y. Spinka,
+\emph{Entropy-efficient finitary codings},
+\href{https://arxiv.org/abs/2201.06542}{arXiv:2201.06542v1},
+Theorems 3.2 and 3.15; version consulted October 25, 2026.
+\bibitem{CR}
+S. Cleary and T. R. Riley,
+\emph{A finitely presented group with unbounded dead-end depth},
+Proc. Amer. Math. Soc. \textbf{134} (2006), 343--349.
+\href{https://pi.math.cornell.edu/~riley/papers/Dead-End_Depth/deadend_corrected.pdf}
+{Corrected author version, revised April 5, 2007}, Section 1.
+\bibitem{HNN}
+G. Higman, B. H. Neumann, and H. Neumann,
+\emph{Embedding theorems for groups},
+J. London Math. Soc. \textbf{24} (1949), 247--254, Theorem IV.
+\href{https://doi.org/10.1112/jlms/s1-24.4.247}{doi:10.1112/jlms/s1-24.4.247}.
+\bibitem{LdS}
+P.-H. Leemann and M. de la Salle,
+\emph{Cayley graphs with few automorphisms: the case of infinite groups},
+Ann. H. Lebesgue \textbf{5} (2022), 73--92, Theorem 1.1.
+\href{https://doi.org/10.5802/ahl.118}{doi:10.5802/ahl.118}.
+\bibitem{Lyons}
+R. Lyons, \emph{Factors of IID on trees},
+Combin. Probab. Comput. \textbf{26} (2017), 285--300.
+\href{https://rdlyons.pages.iu.edu/pdf/fiid.pdf}{Author's version};
+\href{https://rdlyons.pages.iu.edu/errata/fiid.pdf}{2020 erratum}.
+\bibitem{Bowen}
+L. Bowen, \emph{Finitary random interlacements and the Gaboriau--Lyons problem},
+\href{https://arxiv.org/abs/1707.09573}{arXiv:1707.09573}.
+\bibitem{Seward}
+B. Seward,
+\emph{Bernoulli shifts with bases of equal entropy are isomorphic},
+\href{https://arxiv.org/abs/1805.08279}{arXiv:1805.08279}, Theorem 1.1.
+\bibitem{BowenSofic}
+L. Bowen,
+\emph{Measure conjugacy invariants for actions of countable sofic groups},
+J. Amer. Math. Soc. \textbf{23} (2010), 217--245.
+\href{https://arxiv.org/abs/0804.3582}{arXiv:0804.3582}, Theorem 1.1.
+\bibitem{Astra}
+Astra research archive, public research notes in
+\emph{astra-research-knowledge}:
+\href{https://github.com/harjassand/astra-research-knowledge/blob/39cdea532f19217f633f70315d92c314a6ce5e3e/cards/N252-finite-defect-Bernoulli-extraction.txt}{N252, finite defect extraction};
+\href{https://github.com/harjassand/astra-research-knowledge/blob/0146b0d4d6ea02edf757bdb69a517378bf801578/cards/N279-finite-field-Bernoulli-premise-repair.txt}{N279, finite-field premise repair}; and
+\href{https://github.com/harjassand/astra-research-knowledge/blob/142ac61f9b738eeddd466e9cc591b607689a542d/web/pages/d-377e83d87f921de6.html}{N270, random basis and collapse criterion}.
+Versions consulted October 25, 2026. These are public partial or conditional
+research developments, cited for comparison rather than as inputs to the proof.
+\bibitem{Sauers}
+SauersML, public research notes in \emph{group-approximation}:
+\href{https://github.com/SauersML/group-approximation/blob/0d15e308d317eeed73fbdb4e006797a4d6b080d7/research/bernoulli-isomorphism-from-approximate-right-inverses.md}{Bernoulli isomorphism from approximate right inverses}; and
+\href{https://github.com/SauersML/group-approximation/blob/ba6d9b822153b7feb2de9ce2caead1c30a18050f/research/zero-supremum-endomorphisms-have-approximate-right-inverses.md}{the status of the approximate-right-inverse prerequisite}.
+Versions consulted October 25, 2026. The conjugacy criterion retains an
+additional hypothesis; it is cited for comparison, not used as a proof input.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,41 @@
+{
+  "time_utc": "2026-10-26T01:59:31.740227+00:00",
+  "status": "valid",
+  "method": "Actual jsonschema Draft7Validator on official version-dispatcher schema, resolving v0.4 schema from the saved local resource; strict PyYAML SafeLoader with duplicate/merge rejection.",
+  "command": [
+    "/Users/peterburton/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/peterburton/Documents/Math/research-pbur/2026/Furstenberg/Engineer/work/bernoulli_isomorphism/branches/lean/packaging-review/validate_metadata_jsonschema.py"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": {
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3",
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "typing-extensions": "4.16.0"
+  },
+  "package_origin": "Verified PyPI wheels unpacked locally; see validation-runtime/wheel-plan.json. No global or user-site installation.",
+  "input": "/Users/peterburton/Documents/Math/research-pbur/2026/Furstenberg/Engineer/work/bernoulli_isomorphism/branches/lean/palomar-release/formalization.yaml",
+  "input_bytes": 4067,
+  "input_sha256": "7395d40f941febe18ab64cb52835391db7feef632e682c2bc21acd3d4499d144",
+  "schemas": [
+    {
+      "path": "/Users/peterburton/Documents/Math/research-pbur/2026/Furstenberg/Engineer/work/bernoulli_isomorphism/branches/lean/packaging-review/evidence/formalization.schema.json",
+      "sha256": "22bd0b61631535fc68efbdf01e3013362437673ac836d721dfbdf80773244ec3"
+    },
+    {
+      "path": "/Users/peterburton/Documents/Math/research-pbur/2026/Furstenberg/Engineer/work/bernoulli_isomorphism/branches/lean/packaging-review/evidence/v0.4.schema.json",
+      "sha256": "25ff6b25ca4511635aff4443cf20480c15e59dddf19591c730950b442ea54fce"
+    }
+  ],
+  "schema_sources": [
+    "https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json",
+    "https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/v0.4.schema.json"
+  ],
+  "errors": [],
+  "release_unchanged_during_validation": true,
+  "limits": "Upstream schema validation only. Palomar-specific shape/taxonomy checks are recorded separately; this is not official Palomar validation, licensee detection, a Lean build, or registration."
+}

@@ -1,0 +1,19 @@
+{
+  "target": "BernoulliIso.CheckpointPrimeCertificate.mersenne_prime",
+  "export_bytes": 28766710,
+  "nanoda_exit": 0,
+  "nanoda_seconds": 1.5284883975982666,
+  "config": {
+    "use_stdin": false,
+    "export_file_path": "/Users/peterburton/Documents/Codex/2026-10-27/lo/work/checkpoint-prime.export",
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "unpermitted_axiom_hard_error": false,
+    "num_threads": 4,
+    "nat_extension": true,
+    "string_extension": true
+  }
+}

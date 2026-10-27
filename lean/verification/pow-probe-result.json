@@ -1,0 +1,19 @@
+{
+  "target": "pow_probe",
+  "export_bytes": 1103732,
+  "nanoda_exit": 0,
+  "nanoda_seconds": 0.01683664321899414,
+  "config": {
+    "use_stdin": false,
+    "export_file_path": "/Users/peterburton/Documents/Codex/2026-10-27/lo/work/pow-probe.export",
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "unpermitted_axiom_hard_error": false,
+    "num_threads": 4,
+    "nat_extension": true,
+    "string_extension": true
+  }
+}

@@ -1,0 +1,151 @@
+BernoulliIso.FiniteBaseCertificate.unequal_finite_bernoulli_shifts : 1 <
+    Fintype.card BernoulliIso.FiniteBaseCertificate.A ∧
+  Fintype.card BernoulliIso.FiniteBaseCertificate.A <
+      Fintype.card (BernoulliIso.FiniteBaseCertificate.A × BernoulliIso.FiniteBaseCertificate.A) ∧
+    Nonempty
+      (BernoulliIso.ConullConjugacy BernoulliIso.FiniteBaseCertificate.G
+        (BernoulliIso.FiniteBaseCertificate.G →
+          BernoulliIso.FiniteBaseCertificate.A × BernoulliIso.FiniteBaseCertificate.A)
+        (BernoulliIso.FiniteBaseCertificate.G → BernoulliIso.FiniteBaseCertificate.A)
+        (BernoulliIso.bernoulliLaw BernoulliIso.FiniteBaseCertificate.G
+          (BernoulliIso.FiniteBaseCertificate.A × BernoulliIso.FiniteBaseCertificate.A))
+        (BernoulliIso.bernoulliLaw BernoulliIso.FiniteBaseCertificate.G BernoulliIso.FiniteBaseCertificate.A))
+'BernoulliIso.SplitData.linearEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ExtractionTower.extract_injective_of_exhaustion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.ExtractionTower.extract_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.PP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetOperators.rightRepresentation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetOperators.matrix_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetOperators.averageRangeEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.concreteSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.cosetProductRangeEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.expandedSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.splitSection_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.card_support_splitSectionRow_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.expandedSplit_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.continuous_expandedSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.SparseRows.eval_iterateRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.SparseRows.card_support_after_insertion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Ambient.markerGeometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Ambient.Hseq_zero_eq_bot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Ambient.Hseq_quotient_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.ambientSplitCharts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.concreteTower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.concreteStage_section_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.stageSplitRows_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.stageSelection_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.stageSplitRows_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.MarkerGeometry.past_fresh_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.MarkerGeometry.ae_goodMarker' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.sortedCosetChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.sortedCosetChart_zero_iff_packetSelected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.CosetCoordinates.packetSelected_changeBase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.sortedCosetChart_rank_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.SparseTower.ae_extract_injective_of_packet_rows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.Regroup.symm_zero_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Regroup.relativeIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ExtractionTower.measurePreserving_extract' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.exists_conullConjugacy_of_ae_extraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.RelativeProbabilityIso.absorbFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.RelativeProbabilityIso.reservoirFromSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.SplitData.QQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ae_extract_bijective_of_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.residualReservoir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.absorbAllLeftovers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.absorbAllLeftovers_equivariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.stageInsertion_coeff_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.AlgebraicInput.stageSplitRows_coeff_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.AlgebraicInput.concreteStage_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.relativeFiniteSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.finiteBaseSquareConjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ConcreteInterleaving.cosetInfinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ConcreteInterleaving.absorbCosetTracks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.exists_concreteRecoverySet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.concreteExtraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.finiteDataToReservoir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.separateAllOutputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.stageSelection_packet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.ae_concreteTower_extract_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.AlgebraicInput.continuous_concreteOutput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.measurable_concreteOutput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.allOutputsToBernoulli' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.relativeUnexpandedSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.relativeUnexpandedSplit_covariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.measurableEquivOfBijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.conullConjugacyOfRelativeIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.exists_invariant_conull_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.rankChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.rankChart_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.quotientFiberEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.relativeSortedCosetChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.card_quotient_sup_of_disjoint_commute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.CosetCoordinates.insertionRows_sortedCosetChart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.CosetCoordinates.packetSelected_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.FiniteBaseCertificate.conjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.FiniteBaseCertificate.unequal_finite_bernoulli_shifts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.AlgebraicInput.finiteBernoulliIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.finiteBernoulliEquiv_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.finiteBase_square_card_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.doubleFiniteBernoulliIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.doubleFiniteBernoulliIso_covariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.FiniteStages.continuous_regroupAndRepeat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.FiniteStages.measurable_regroupAndRepeat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ExtractionTower.continuous_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ExtractionTower.measurable_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.ae_fullRecoverySet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.recoveryFullEquiv_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.AlgebraicInput.overFullRecovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.siteStream_fresh_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.CosetCoordinates.cosetPriority_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.MarkerGeometry.measurePreserving_goodMarkerShift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BernoulliIso.relativeExtractionIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ProbabilityIso.conullRestrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ConullConjugacy.transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ExtractionTower.difference_eq_prefixSection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ExtractionTower.exists_remainder_and_prefix' depends on axioms: [propext, Quot.sound]
+'BernoulliIso.Regroup.linearEquiv' depends on axioms: [propext, Quot.sound]
+'BernoulliIso.Regroup.symm_zero_eq_insertion' depends on axioms: [propext, Quot.sound]
+'BernoulliIso.Regroup.linearEquiv_covariant' depends on axioms: [propext, Quot.sound]
+'BernoulliIso.RelativeProbabilityIso.pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ProbabilityIso.reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.RelativeProbabilityIso.absorb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.uniformFinite_isAddHaarMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.infinitePi_isAddHaarMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ProbabilityIso.piProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ae_all_eventually_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.ae_extract_injective_of_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Upstream.point_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Upstream.rectangle_identities' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Upstream.strict_surplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.Upstream.algebraicInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.FiniteBaseCertificate.group_countable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.FiniteBaseCertificate.base_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BernoulliIso.FiniteBaseCertificate.bases_unequal' depends on axioms: [propext, Classical.choice, Quot.sound]

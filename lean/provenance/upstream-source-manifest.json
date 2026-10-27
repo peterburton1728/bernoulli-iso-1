@@ -1,0 +1,756 @@
+{
+  "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "entry_modules": [
+    "OAI.RingTheory.DirectFiniteness.PrescribedData",
+    "OAI.RingTheory.DirectFiniteness.AssignedDevelopment",
+    "OAI.RingTheory.DirectFiniteness.CharacterIdempotents",
+    "OAI.RingTheory.DirectFiniteness.Rectangular"
+  ],
+  "external_imports": [
+    "Mathlib"
+  ],
+  "files": [
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.AffineLines",
+      "path": "OAI/RingTheory/DirectFiniteness/AffineLines.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/AffineLines.lean",
+      "sha256": "2ded404516c5cb7c05630fbfb9929c2892937eb50eab4ea405dc299f10d965bd",
+      "bytes": 3111
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.AlgebraicPacking",
+      "path": "OAI/RingTheory/DirectFiniteness/AlgebraicPacking.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/AlgebraicPacking.lean",
+      "sha256": "c76d490bb7ba42e19ac45b3d0570fb25cb263bca9cc0f2006b820919c75c1099",
+      "bytes": 7804
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.Alteration",
+      "path": "OAI/RingTheory/DirectFiniteness/Alteration.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/Alteration.lean",
+      "sha256": "0d928603a5670e2ec96bafe3d2dde4b98f87c9d9ee1e330fe955cb2c72f0d349",
+      "bytes": 4817
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.AssignedDevelopment",
+      "path": "OAI/RingTheory/DirectFiniteness/AssignedDevelopment.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/AssignedDevelopment.lean",
+      "sha256": "50111789d59653072425cb76f7103ff8f009ea807ca2668c224e646c15667484",
+      "bytes": 5019
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BalanceCoarsening",
+      "path": "OAI/RingTheory/DirectFiniteness/BalanceCoarsening.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BalanceCoarsening.lean",
+      "sha256": "1fd280af297ca874c4d0237fa18262a80c2d9bfc38a3275a52930ed6c02e5ac2",
+      "bytes": 5064
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BalanceDetachment",
+      "path": "OAI/RingTheory/DirectFiniteness/BalanceDetachment.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BalanceDetachment.lean",
+      "sha256": "ca0ce507362aa9101b552b51766cafc11723283dad4feaa855b832f17b266f15",
+      "bytes": 4716
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BalanceObstruction",
+      "path": "OAI/RingTheory/DirectFiniteness/BalanceObstruction.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BalanceObstruction.lean",
+      "sha256": "26befed2b53533dd0b9e7cf0b94915dd72ff5ab0ee022a45075c13b4cb06a50c",
+      "bytes": 3557
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BalanceRestriction",
+      "path": "OAI/RingTheory/DirectFiniteness/BalanceRestriction.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BalanceRestriction.lean",
+      "sha256": "b22eb06ccded464047412a34fc6770aa5d82414e3ae8c54753f8ebf666f2b522",
+      "bytes": 3494
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BoundaryCycles",
+      "path": "OAI/RingTheory/DirectFiniteness/BoundaryCycles.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BoundaryCycles.lean",
+      "sha256": "c4cb380ada2672132232812b4a821820a2727fbce52cc9f6f6bdf061433fcedb",
+      "bytes": 3625
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BoundaryFilling",
+      "path": "OAI/RingTheory/DirectFiniteness/BoundaryFilling.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BoundaryFilling.lean",
+      "sha256": "a7712b02d436a7cc05db8fbbd99e2f21426358fdfa7b73d2b85c5ea6ba19736f",
+      "bytes": 4207
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.BoundarySplitting",
+      "path": "OAI/RingTheory/DirectFiniteness/BoundarySplitting.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/BoundarySplitting.lean",
+      "sha256": "5a32cbb5f97d69c26b11e6c183fc8e2731412a498e2901ba50cdd20b91b51c71",
+      "bytes": 1603
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateBounds",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateBounds.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateBounds.lean",
+      "sha256": "ee3e1c18cbdc7de1176fea9579791193c574b36d55fa2feb52c0e0481fc008b1",
+      "bytes": 4203
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateClassification",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateClassification.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateClassification.lean",
+      "sha256": "070db9671c180bc9b135bcb8cddb41ff9f6634525f7e300f3084b4488b836573",
+      "bytes": 5223
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateCounting",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateCounting.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateCounting.lean",
+      "sha256": "e6395d466161815b029728a9a55e47d86401747002b38b81c05d8b4e1947f0fd",
+      "bytes": 8427
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateDependencies",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateDependencies.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateDependencies.lean",
+      "sha256": "8c82b65336b42ce005ccd019491158892bc3d6de505da35207ee218a1c1f955c",
+      "bytes": 5794
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateGeometry",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateGeometry.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateGeometry.lean",
+      "sha256": "b0416bbd724a7f2d4ca509ebcb7ca3c6f4d77703fd3829f26e6f3aed0756c0f1",
+      "bytes": 4686
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateModel",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateModel.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateModel.lean",
+      "sha256": "c270d7170acd92f6cb6a4721fe480ee766f4033e3295c14b00d730ee64212723",
+      "bytes": 6647
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CandidateRelations",
+      "path": "OAI/RingTheory/DirectFiniteness/CandidateRelations.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CandidateRelations.lean",
+      "sha256": "f22b6cacdd9faffa18296622ce2cc1f15555520054234e0581c2433c6dc62555",
+      "bytes": 5993
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CharacterIdempotents",
+      "path": "OAI/RingTheory/DirectFiniteness/CharacterIdempotents.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CharacterIdempotents.lean",
+      "sha256": "a30b6dffac0e1a55fc74184fbfd5ff18b38d254667b5f15647a20ded86625242",
+      "bytes": 5793
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CharacterTwist",
+      "path": "OAI/RingTheory/DirectFiniteness/CharacterTwist.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CharacterTwist.lean",
+      "sha256": "cbac9dfa72b99d64832be2e180d2a47c63af93448c8dd2367fd784116da1d1f1",
+      "bytes": 6871
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CoordinateCharacters",
+      "path": "OAI/RingTheory/DirectFiniteness/CoordinateCharacters.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CoordinateCharacters.lean",
+      "sha256": "d3c8f304f9e1372ad3ca6a3ef0fb7dc3d445c85003e50062b58047b9c57fc078",
+      "bytes": 2476
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CycleFactorization",
+      "path": "OAI/RingTheory/DirectFiniteness/CycleFactorization.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CycleFactorization.lean",
+      "sha256": "c259cb02f56ccbd0d2b1da4a29c714a146de720e1c039367e886db896a6a2008",
+      "bytes": 3852
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CycleSplitting",
+      "path": "OAI/RingTheory/DirectFiniteness/CycleSplitting.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CycleSplitting.lean",
+      "sha256": "339f139806cf1e8e651d9e7d8c890547624349206adf573a071341a7011477ad",
+      "bytes": 2318
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CycleSums",
+      "path": "OAI/RingTheory/DirectFiniteness/CycleSums.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CycleSums.lean",
+      "sha256": "83b15aaa0dfa3b049d34ed1c28029ca8d5e97d40d812c0b4469103f8ebb2e262",
+      "bytes": 4263
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.CyclicLabels",
+      "path": "OAI/RingTheory/DirectFiniteness/CyclicLabels.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/CyclicLabels.lean",
+      "sha256": "82a33774155e710569a5c816762ca6cc0f5653b4366687cd637ddec4c81e431a",
+      "bytes": 3220
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DetachmentGenus",
+      "path": "OAI/RingTheory/DirectFiniteness/DetachmentGenus.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DetachmentGenus.lean",
+      "sha256": "36b27b85a2ad8731fc2234901e395f3291cbcf316aacbb69dedbd89674ee74ca",
+      "bytes": 8659
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DiagramDeletion",
+      "path": "OAI/RingTheory/DirectFiniteness/DiagramDeletion.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DiagramDeletion.lean",
+      "sha256": "4310655661c3222d808714e71352bcfe9cf5a7ea47ac6141706a86a372f6e391",
+      "bytes": 6027
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DiagramInsertion",
+      "path": "OAI/RingTheory/DirectFiniteness/DiagramInsertion.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DiagramInsertion.lean",
+      "sha256": "7d3f30ca60084d619dcd8eb71e3e75b35fc0807644e2ec61dc112cba0965266d",
+      "bytes": 6065
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DiagramJoining",
+      "path": "OAI/RingTheory/DirectFiniteness/DiagramJoining.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DiagramJoining.lean",
+      "sha256": "8943fcb82a8f0bcbbe6035614cf1f1a8b5198b4c3853dba0448f644b895c11ca",
+      "bytes": 1987
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DiagramObstruction",
+      "path": "OAI/RingTheory/DirectFiniteness/DiagramObstruction.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DiagramObstruction.lean",
+      "sha256": "0feb442d65a0976dd79d1f8a758cffdfd51c9316213a366196e5c90408311f33",
+      "bytes": 4079
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DiagramReduction",
+      "path": "OAI/RingTheory/DirectFiniteness/DiagramReduction.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DiagramReduction.lean",
+      "sha256": "daead3206cbdfc5f675406e3fd587ae6f1e03a315b7d014eb74ed29dfd88aa4c",
+      "bytes": 1329
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DirectionFrame",
+      "path": "OAI/RingTheory/DirectFiniteness/DirectionFrame.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DirectionFrame.lean",
+      "sha256": "a9959660067b078c6bbe5ce9016083ed372d9dc8e72329a4db25ac51828a2a25",
+      "bytes": 8203
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.DirectionSpaces",
+      "path": "OAI/RingTheory/DirectFiniteness/DirectionSpaces.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/DirectionSpaces.lean",
+      "sha256": "39d85b27f691a9d195e6d2e5b897c59593a4cea827f63d3f06f7fb1f16338b03",
+      "bytes": 4340
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.EulerBound",
+      "path": "OAI/RingTheory/DirectFiniteness/EulerBound.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/EulerBound.lean",
+      "sha256": "650c128cbe5f7005953a66a9a2049aa41b5008d5ba4c96ab35eaff5c7d283a37",
+      "bytes": 2887
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.EventLoad",
+      "path": "OAI/RingTheory/DirectFiniteness/EventLoad.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/EventLoad.lean",
+      "sha256": "addf2ebb6902cace4021c2796b63f6ed9d5be13b06dab4609588d84067430801",
+      "bytes": 2996
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.FieldExtensions",
+      "path": "OAI/RingTheory/DirectFiniteness/FieldExtensions.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/FieldExtensions.lean",
+      "sha256": "f19395ce80f183a12f99e30d33b55564e9a36a2e99368dde61183c71d3ebdb94",
+      "bytes": 1123
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.FiniteAffine",
+      "path": "OAI/RingTheory/DirectFiniteness/FiniteAffine.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/FiniteAffine.lean",
+      "sha256": "33cf1a899761fc0c4f8ef4ddf688d200631d757f40151506307ed61bc19241a6",
+      "bytes": 5959
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.FiniteParameters",
+      "path": "OAI/RingTheory/DirectFiniteness/FiniteParameters.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/FiniteParameters.lean",
+      "sha256": "61f289d847bb9ade2d4f7822163c4f2ee5411de1de4912fcd8e53b9c915b8ed9",
+      "bytes": 3147
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.FrameExistence",
+      "path": "OAI/RingTheory/DirectFiniteness/FrameExistence.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/FrameExistence.lean",
+      "sha256": "a8d79a90620d4f9521c2eafaed9b0304b0f9345359322c26feb19343d93b8966",
+      "bytes": 1920
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.FrameTransport",
+      "path": "OAI/RingTheory/DirectFiniteness/FrameTransport.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/FrameTransport.lean",
+      "sha256": "652e34aee547ba95331cb732a962e4b51ed93b4a258e247a4b8d624b4d81ad7f",
+      "bytes": 2223
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.GluedGroup",
+      "path": "OAI/RingTheory/DirectFiniteness/GluedGroup.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/GluedGroup.lean",
+      "sha256": "291686cee2579d8356ba36784e2f2405ce24010e8c41f166b08d54e1bc22d754",
+      "bytes": 3597
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.GluedWords",
+      "path": "OAI/RingTheory/DirectFiniteness/GluedWords.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/GluedWords.lean",
+      "sha256": "6e43a38d8c643256b7628e50837a354678261ac0097c58fd941acc2e82bc4344",
+      "bytes": 2987
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.GroupEmbedding",
+      "path": "OAI/RingTheory/DirectFiniteness/GroupEmbedding.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/GroupEmbedding.lean",
+      "sha256": "dff9971f12d16f0d98a8cb2b8f3692910a4602705906b13361e5f2707b9c5999",
+      "bytes": 4118
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.HoleEvents",
+      "path": "OAI/RingTheory/DirectFiniteness/HoleEvents.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/HoleEvents.lean",
+      "sha256": "3e5b3f12e153769640d695b50cbe9c0d717ec0e97e6d2076c50e55bf9370f9b4",
+      "bytes": 6356
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.HoleExistence",
+      "path": "OAI/RingTheory/DirectFiniteness/HoleExistence.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/HoleExistence.lean",
+      "sha256": "91427b451394d164f7df34d4284b54edeb6f10f80760b63076cc7eeced96421b",
+      "bytes": 4173
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.HoleNumerics",
+      "path": "OAI/RingTheory/DirectFiniteness/HoleNumerics.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/HoleNumerics.lean",
+      "sha256": "3f773e2584f051d77da6787275affcc3ebe029e34f201f9d7fc594309c1216c9",
+      "bytes": 4107
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.HoleSelection",
+      "path": "OAI/RingTheory/DirectFiniteness/HoleSelection.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/HoleSelection.lean",
+      "sha256": "b0276086b1635a623f70341f272fc053a28956a1c80493c965cb30cb439d7cd8",
+      "bytes": 6343
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.IncidenceCycles",
+      "path": "OAI/RingTheory/DirectFiniteness/IncidenceCycles.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/IncidenceCycles.lean",
+      "sha256": "4706b25c0f2cf73db23a78b89c810dd41b14a2add55291333ab6889abea68277",
+      "bytes": 5760
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.IncidenceDirections",
+      "path": "OAI/RingTheory/DirectFiniteness/IncidenceDirections.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/IncidenceDirections.lean",
+      "sha256": "4824eeb07b645d585b616bd9578d7b554097f0acc7647c3910f6146f93e99836",
+      "bytes": 5080
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.LabelSupport",
+      "path": "OAI/RingTheory/DirectFiniteness/LabelSupport.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/LabelSupport.lean",
+      "sha256": "86dc4a2bc295181999e3f3d97ef1b486076b40935e7104337c920b6fa88c9c44",
+      "bytes": 3853
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.LexicographicOrder",
+      "path": "OAI/RingTheory/DirectFiniteness/LexicographicOrder.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/LexicographicOrder.lean",
+      "sha256": "ace94020ca1f2b66dd8e6bef628803f4aa9770c19b0912b699ecc4e042ba1efd",
+      "bytes": 1853
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.Model",
+      "path": "OAI/RingTheory/DirectFiniteness/Model.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/Model.lean",
+      "sha256": "a5f3f5c135ffa3bfc3743e0f66f24c66f028d70759cb29d3eaeb3722f90aedec",
+      "bytes": 304
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.ModelPartition",
+      "path": "OAI/RingTheory/DirectFiniteness/ModelPartition.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/ModelPartition.lean",
+      "sha256": "d6d4fc1f3e769efbf858ff8ed2ea363acb2d67dd38838f4ab515905194e69ee7",
+      "bytes": 5756
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.MultiHNN",
+      "path": "OAI/RingTheory/DirectFiniteness/MultiHNN.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/MultiHNN.lean",
+      "sha256": "1439b0e8fa27b10a53cb0d7dcf53e1068601c60dccbfd5fd7594d1f83aa28d6c",
+      "bytes": 6017
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.OneCandidateCounting",
+      "path": "OAI/RingTheory/DirectFiniteness/OneCandidateCounting.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/OneCandidateCounting.lean",
+      "sha256": "5f0b552ff1faf50facbccc77224676f23d0e913a9c505a51527b8bb4a0825eaf",
+      "bytes": 8086
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.OpenDiagrams",
+      "path": "OAI/RingTheory/DirectFiniteness/OpenDiagrams.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/OpenDiagrams.lean",
+      "sha256": "a824244a1df1966b5a2a94437afa45066ede935d49d5d62ad0df325d01514e60",
+      "bytes": 4506
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.Pairing",
+      "path": "OAI/RingTheory/DirectFiniteness/Pairing.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/Pairing.lean",
+      "sha256": "3e3000a62390c7dddf30ecf45ab9bfe36159f09985efcb7c0b4360279edec4dd",
+      "bytes": 12591
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.ParameterBounds",
+      "path": "OAI/RingTheory/DirectFiniteness/ParameterBounds.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/ParameterBounds.lean",
+      "sha256": "4cad5b7a54e23a608a4bff1110d757c0dae91ee6aafa7d83e7ffdfb6f9c795ca",
+      "bytes": 1803
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PartialPartition",
+      "path": "OAI/RingTheory/DirectFiniteness/PartialPartition.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PartialPartition.lean",
+      "sha256": "36a01d18399f6f079d52660f5e2035bfcfd5caf76aba1c8907b001551823b0db",
+      "bytes": 4825
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PartitionMerging",
+      "path": "OAI/RingTheory/DirectFiniteness/PartitionMerging.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PartitionMerging.lean",
+      "sha256": "674ce1be685fee3a696449b98cf2d56cf3be4d4045506c75778f4c5ee026f78d",
+      "bytes": 6880
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PlanarBalance",
+      "path": "OAI/RingTheory/DirectFiniteness/PlanarBalance.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PlanarBalance.lean",
+      "sha256": "45fd5058b29b22b8738b75bf98b6a2ab6fbf6f8084a444cebaafa37e8dd7b142",
+      "bytes": 13485
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PlanarDiagrams",
+      "path": "OAI/RingTheory/DirectFiniteness/PlanarDiagrams.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PlanarDiagrams.lean",
+      "sha256": "45f17172d8c5edbc2d7c4492248df9185ac4fe52705f5abc912e75f56825e217",
+      "bytes": 4739
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PlaneOperators",
+      "path": "OAI/RingTheory/DirectFiniteness/PlaneOperators.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PlaneOperators.lean",
+      "sha256": "7ee69861f87bc2b597819dbea6d62a22a59d1b4efc006d7638acb8dddb56f774",
+      "bytes": 990
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedData",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedData.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedData.lean",
+      "sha256": "c1f0c6f63cf11c3ae4866d80ba87fc571a1cff205aeebfe691238c451e09f893",
+      "bytes": 4357
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedDirections",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedDirections.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedDirections.lean",
+      "sha256": "81764d9d79eccae96eeb16ff42fe7e1a09e15df29d161c3f19625ad86963a0a2",
+      "bytes": 3038
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedFields",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedFields.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedFields.lean",
+      "sha256": "e79750485e6776c016f9b93fcf95ce573c59f9da96d4ee300023959ec72b8a5d",
+      "bytes": 2527
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedIncidence",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedIncidence.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedIncidence.lean",
+      "sha256": "748713c2f60dfbbf6e9d6c04d3dd7eb4f813e491b98bf382d7aece0895d410bf",
+      "bytes": 6395
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedPairing",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedPairing.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedPairing.lean",
+      "sha256": "9824982f7ee47fc40048e6b4586879aa9d5e5f4f6a15ec561b319ee1d8c029d4",
+      "bytes": 3783
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedParameters",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedParameters.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedParameters.lean",
+      "sha256": "0b71e68d48e2e830d9c152fceb00e7c055a24183960e23e17fa76f8d4baab61e",
+      "bytes": 2659
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedSearch",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedSearch.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedSearch.lean",
+      "sha256": "fff7e9afc92cd217cc86519c7d8ee6c256bb0b6ab811af99e42aa52996848978",
+      "bytes": 3260
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedSlots",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedSlots.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedSlots.lean",
+      "sha256": "5300db4c4a9241eae9c79613ef29f3f5d8079735ec6359c8cd8a371783443a26",
+      "bytes": 3393
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrescribedSubfield",
+      "path": "OAI/RingTheory/DirectFiniteness/PrescribedSubfield.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrescribedSubfield.lean",
+      "sha256": "b3cce7cd927a755f806337b7264012c6f3cf8833b1497e2cc5b974a665121a79",
+      "bytes": 2320
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.PrimeCertificate",
+      "path": "OAI/RingTheory/DirectFiniteness/PrimeCertificate.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/PrimeCertificate.lean",
+      "sha256": "2a24a50ef31f9f5c2c0ac55d3c07ab7e40581e1eb45a488fd0c2bb1119452093",
+      "bytes": 276
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.QuotientField",
+      "path": "OAI/RingTheory/DirectFiniteness/QuotientField.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/QuotientField.lean",
+      "sha256": "45f985efcc4f3c64f3df374fcfb8aa824b7927ec0e94e0555ac6571f3638fe5d",
+      "bytes": 3638
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.Rectangular",
+      "path": "OAI/RingTheory/DirectFiniteness/Rectangular.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/Rectangular.lean",
+      "sha256": "b5bd637cbde3c8d82925d2f17a0364f497971952b9e00c74f058be6cb8018e7b",
+      "bytes": 2360
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.ReducedWalks",
+      "path": "OAI/RingTheory/DirectFiniteness/ReducedWalks.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/ReducedWalks.lean",
+      "sha256": "7f9f27b5247210af1a4a99977b0774bed15e5074a6113fbec6f87c91b764c004",
+      "bytes": 3738
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.ReplacementGeometry",
+      "path": "OAI/RingTheory/DirectFiniteness/ReplacementGeometry.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/ReplacementGeometry.lean",
+      "sha256": "491cefd77e9bf24ed64ee1b056d034ccc3af9e7803bf4f96840eafbba1227830",
+      "bytes": 3662
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.ReplacementPolygon",
+      "path": "OAI/RingTheory/DirectFiniteness/ReplacementPolygon.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/ReplacementPolygon.lean",
+      "sha256": "109da84b51b4532abe127e38627762ff8df6e420c0c85310a1584fad242e056d",
+      "bytes": 7324
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.RibbonDetachment",
+      "path": "OAI/RingTheory/DirectFiniteness/RibbonDetachment.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/RibbonDetachment.lean",
+      "sha256": "1386136bb261cc4ea510726da6d1a681b8dc42f29f31a1a44e5986ad09ceec28",
+      "bytes": 7689
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.RibbonGeometry",
+      "path": "OAI/RingTheory/DirectFiniteness/RibbonGeometry.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/RibbonGeometry.lean",
+      "sha256": "7c8adc55ef01208038b1c25b78acebf478769bc3f0ae6ecb5a21bf8d0ebbb3ce",
+      "bytes": 13690
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.RibbonRestriction",
+      "path": "OAI/RingTheory/DirectFiniteness/RibbonRestriction.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/RibbonRestriction.lean",
+      "sha256": "395eb9e4218ae2649fdb861d41598a800889338cd5ba5886bea077a428e570f9",
+      "bytes": 7984
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.RibbonSplitting",
+      "path": "OAI/RingTheory/DirectFiniteness/RibbonSplitting.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/RibbonSplitting.lean",
+      "sha256": "39339cf94d4a9a1db732ad539ab2b6a489bfecd9dc15ac1cf5faf9244d4461b4",
+      "bytes": 4773
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.RibbonSums",
+      "path": "OAI/RingTheory/DirectFiniteness/RibbonSums.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/RibbonSums.lean",
+      "sha256": "62082517789fb35aa12116ca973c7301e67bff2449035492332f10d3cbe148b4",
+      "bytes": 5800
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.RibbonWheels",
+      "path": "OAI/RingTheory/DirectFiniteness/RibbonWheels.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/RibbonWheels.lean",
+      "sha256": "f93c89787393480f135da328673408f7ecec62bc0da55920d9fd5b9ea2c837fb",
+      "bytes": 4900
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.ShortIndependence",
+      "path": "OAI/RingTheory/DirectFiniteness/ShortIndependence.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/ShortIndependence.lean",
+      "sha256": "1e7904d82b4845fbf672bd11669b19fd7e195f432f6c24c1e5bc1ab463a6f817",
+      "bytes": 2807
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SimplexBound",
+      "path": "OAI/RingTheory/DirectFiniteness/SimplexBound.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SimplexBound.lean",
+      "sha256": "69f281e10d1b9305d0c120d28ce3eeea761adc0c5f896f5465163b50e7d350f8",
+      "bytes": 2335
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabAssembly",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabAssembly.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabAssembly.lean",
+      "sha256": "ef75b2c17d40e7cb9225a861e6bd197f533dabc16dd24a9c9898a952488eb5a6",
+      "bytes": 2732
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabAvoidance",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabAvoidance.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabAvoidance.lean",
+      "sha256": "902ff90abb321669ead978c87d991891c6688310d5360db829a379949768e7fe",
+      "bytes": 24945
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabEvents",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabEvents.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabEvents.lean",
+      "sha256": "9453ea8e6b519749365647e136e77de7eea18b0b06fcd455dcb2dd0d8b40cdba",
+      "bytes": 6708
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabHoleEvents",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabHoleEvents.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabHoleEvents.lean",
+      "sha256": "d0b9a88878be026b65d87c5ad1276e993de037aa4e37408354c27bb2658255c6",
+      "bytes": 2135
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabKeys",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabKeys.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabKeys.lean",
+      "sha256": "2913aa80c6e62784ef540c7218f07b7e88dcf90d6ecc3e3aa9c3a9952141f31e",
+      "bytes": 3740
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabLoad",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabLoad.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabLoad.lean",
+      "sha256": "f95dcd98eba18505762035db6009d66a4107cf24bc6d634f6563493c783ce2d0",
+      "bytes": 3139
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabNumerics",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabNumerics.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabNumerics.lean",
+      "sha256": "8f749dcb847a9e1266c0be13caf0b95c31adb7dfed0a45786aac961cfb82c86f",
+      "bytes": 2869
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabPartition",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabPartition.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabPartition.lean",
+      "sha256": "20152c4cac5c440b542e915e04a579f7a8cd567bb2f0c733ee3c8d167877f0e8",
+      "bytes": 5326
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabPatch",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabPatch.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/SlabPatch.lean",
+      "sha256": "c98260a3324fceceaabe590e9ad8f5ebb42709921fb070b4000f10dbb27d7f78",
+      "bytes": 4590
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.TradeDegree",
+      "path": "OAI/RingTheory/DirectFiniteness/TradeDegree.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/TradeDegree.lean",
+      "sha256": "9eb50bb4f3ca251ec4678ce7f789c3f6bc59e15eb113782fe3d34af744a3726e",
+      "bytes": 5990
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.TradeFamily",
+      "path": "OAI/RingTheory/DirectFiniteness/TradeFamily.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/TradeFamily.lean",
+      "sha256": "4a4505a30ca9681b891cc4ced1a4f8604fe9609184524bcf8b08013df4e24c90",
+      "bytes": 4339
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.TradeGirth",
+      "path": "OAI/RingTheory/DirectFiniteness/TradeGirth.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/TradeGirth.lean",
+      "sha256": "f49dc68e7c06430f498206724301ffacc73640c1dce2c51db83ff099de5fe1b2",
+      "bytes": 3935
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.TradeLines",
+      "path": "OAI/RingTheory/DirectFiniteness/TradeLines.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/TradeLines.lean",
+      "sha256": "2162a1d0dc53b1d4c313166223bb953ee160fa21d3182fac826f3080cd2f8172",
+      "bytes": 4079
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.TradePolygon",
+      "path": "OAI/RingTheory/DirectFiniteness/TradePolygon.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/TradePolygon.lean",
+      "sha256": "d88992ff41d9618a42213cad2500d7dd14771fabdd03f70de520f1fc39a3baca",
+      "bytes": 4165
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.VertexMerging",
+      "path": "OAI/RingTheory/DirectFiniteness/VertexMerging.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/VertexMerging.lean",
+      "sha256": "a94d9c4096c45878314eb3bc9525896a2069456eb9ad448decffab4df45a1d23",
+      "bytes": 5566
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.WeightTransfer",
+      "path": "OAI/RingTheory/DirectFiniteness/WeightTransfer.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/WeightTransfer.lean",
+      "sha256": "83e93d88b129112a6b2549b7be5919b74530dc1e62ed18557123ea82ebcfb719",
+      "bytes": 3122
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.WordCycles",
+      "path": "OAI/RingTheory/DirectFiniteness/WordCycles.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/WordCycles.lean",
+      "sha256": "32aef9bd80890a6db2a738a6faa00b3349ab22386be90e334072a3d277670309",
+      "bytes": 506
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.WordDiagrams",
+      "path": "OAI/RingTheory/DirectFiniteness/WordDiagrams.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/WordDiagrams.lean",
+      "sha256": "3f2cd845c3197a6762accde4060c70aef5ef73b8ba6e8589f4f0efbb8c3c4eb1",
+      "bytes": 2269
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.WordReduction",
+      "path": "OAI/RingTheory/DirectFiniteness/WordReduction.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/WordReduction.lean",
+      "sha256": "550de6b4de3150cef969867a935c78f83ab7c3a23d5fab3cb881743c9311af07",
+      "bytes": 5874
+    },
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.WordWheels",
+      "path": "OAI/RingTheory/DirectFiniteness/WordWheels.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness/WordWheels.lean",
+      "sha256": "3e9eb92ea66e599b21b3f615bbd181545a41dbc4a931d0a3040604039aa8376a",
+      "bytes": 3235
+    }
+  ]
+}

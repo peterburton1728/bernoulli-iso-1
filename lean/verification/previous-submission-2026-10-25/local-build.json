@@ -1,0 +1,78 @@
+{
+  "status": "PASS: local sequential module-port build and standalone theorem",
+  "host": "macOS arm64",
+  "lean": "4.35.0",
+  "lean_commit": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "unchanged_proof_exports_reused": 50,
+  "changed_or_new_modules_checked": {
+    "UpstreamFoundation": {
+      "exit_code": 0,
+      "seconds": 164.8878315,
+      "source_sha256": "761f029ab51b0b87dcbafdfcca62938d7b4d0605c8711440daed2acbb1e152ef",
+      "output_sha256": "885287ca93788d4706832e97b4f24d5f124a0cca7a7a375bb8f9d861f34a6106"
+    },
+    "UpstreamConstruction": {
+      "exit_code": 0,
+      "seconds": 313.99838775,
+      "source_sha256": "3746c44f7b0b7f90063a1c040c62fcdaf831ebc86bd33b70a7dbfe9a6339ef6c",
+      "output_sha256": "cd4fc3f0d48fee8ebd1cc20d126c2ab172bf3375e50771b14241db052c02be1b"
+    },
+    "CertifiedInput": {
+      "exit_code": 0,
+      "seconds": 179.33723112500002,
+      "source_sha256": "1edf06963ad437a89ee762065b883744876a31bacb84087b891d918e77ddd537",
+      "output_sha256": "ecfb8aaba98add82dbf617661c97c6d1e9b2128114bfaeda038cebcf70f7d0ad"
+    },
+    "BernoulliIso.FiniteBaseCertificate": {
+      "exit_code": 0,
+      "seconds": 206.69627100000002,
+      "source_sha256": "42581c1ea6032b13321e9d57f9ac1595b800eddc8bb79378e373719734fc4e44",
+      "output_sha256": "72ac1c1aa69bc7aa0b69190056a4a2156cbf1ef5f0a2e8201bb38e9a82dc6d50"
+    },
+    "BernoulliIso": {
+      "exit_code": 0,
+      "seconds": 194.42227437500003,
+      "source_sha256": "66447568d3ee924a7f448bfc0feff9fc5ac44f5fa3db3c6aa706bf66149ffdf5",
+      "output_sha256": "c4cd087026745e221f3393acf68ade26c7382f1ead9270bacc5f3163445847da"
+    },
+    "Audit": {
+      "exit_code": 0,
+      "seconds": 110.16905908400008,
+      "source_sha256": "99d585327765d959113f0726cc5527cc17e9ee48ba3ca37fc37df7aa175e28c3",
+      "output_sha256": "76daf168bbec09bf00859ce3ef195e98250de411f085a03f2aa23a794410949b"
+    },
+    "Challenge": {
+      "exit_code": 0,
+      "seconds": 13.775035209000066,
+      "source_sha256": "d6f2947448dfb8670deca3d7186379e83a448e07edce5687ea0737924acb05c1",
+      "output_sha256": "824d944d1c4f6001b0abf65e0caab22a16a3139805ee46067d78f9857b5fdf11"
+    },
+    "Solution": {
+      "exit_code": 0,
+      "seconds": 136.150332084,
+      "source_sha256": "f6403abfd14d0092c9fee2f64aae9af1cf34939efc2109e3479734a1390f1f00",
+      "output_sha256": "ac5036270e6e1d9e7acfe3a289c8e964f0f80e3c12ef7fee8f5f803609160a2f"
+    }
+  },
+  "aggregate_axiom_audit": {
+    "status": "PASS",
+    "declarations": 111,
+    "exact_original_declaration_order": true,
+    "permitted_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "audit_log_sha256": "be4638907fa74730d234fec6874040281c77486f6f3da02b521cd62e57213f15"
+  },
+  "standalone_theorem": "BernoulliCertificate.unequal_finite_bernoulli_shifts",
+  "standalone_theorem_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "clean_Linux_standard_Lake_build": "not executed locally; public preflight workflow supplied",
+  "protected_Palomar_preflight": "not executed",
+  "registration": "not submitted"
+}

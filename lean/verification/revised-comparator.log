@@ -1,0 +1,1483 @@
+WARNING: Sandbox disabled, this run is not trustworthy.
+Resolving dependencies
+Building Challenge
+⚠ [3122/3123] Replayed Challenge
+warning: Challenge.lean:45:8: declaration uses `sorry`
+Build completed successfully (3123 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BernoulliCertificate.unequal_finite_bernoulli_shifts, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+ℹ [1095/1375] Replayed BernoulliIso.Recovery
+info: BernoulliIso/Recovery.lean:120:0: 'BernoulliIso.ExtractionTower.difference_eq_prefixSection' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/Recovery.lean:121:0: 'BernoulliIso.ExtractionTower.extract_injective_of_exhaustion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: BernoulliIso/Recovery.lean:122:0: 'BernoulliIso.ExtractionTower.exists_remainder_and_prefix' depends on axioms: [propext, Quot.sound]
+ℹ [2674/2770] Replayed BernoulliIso.Survival
+info: BernoulliIso/Survival.lean:89:0: 'BernoulliIso.ae_all_eventually_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/Survival.lean:90:0: 'BernoulliIso.ae_extract_injective_of_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2675/2770] Replayed BernoulliIso.CompactExtraction
+info: BernoulliIso/CompactExtraction.lean:78:0: 'BernoulliIso.ExtractionTower.extract_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CompactExtraction.lean:79:0: 'BernoulliIso.ae_extract_bijective_of_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3144/3289] Replayed BernoulliIso.AmbientGroup
+info: BernoulliIso/AmbientGroup.lean:242:0: 'BernoulliIso.Ambient.shiftAction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:243:0: 'BernoulliIso.Ambient.markerGeometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:244:0: 'BernoulliIso.Ambient.commute_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:245:0: 'BernoulliIso.Ambient.H_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:246:0: 'BernoulliIso.Ambient.Hseq_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:247:0: 'BernoulliIso.Ambient.Hseq_zero_eq_bot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:248:0: 'BernoulliIso.Ambient.Hseq_quotient_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AmbientGroup.lean:249:0: 'BernoulliIso.Ambient.lamps_exhaust' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3145/3289] Replayed BernoulliIso.AlgebraicInput
+info: BernoulliIso/AlgebraicInput.lean:54:0: 'BernoulliIso.AlgebraicInput.PP' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3146/3289] Replayed BernoulliIso.AlgebraicSplit
+info: BernoulliIso/AlgebraicSplit.lean:108:0: 'BernoulliIso.SplitData.QQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/AlgebraicSplit.lean:109:0: 'BernoulliIso.SplitData.linearEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3147/3289] Replayed BernoulliIso.GroupRingAction
+warning: BernoulliIso/GroupRingAction.lean:141:10: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BernoulliIso/GroupRingAction.lean:143:10: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hji]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3149/3289] Replayed BernoulliIso.SubgroupAverage
+warning: BernoulliIso/SubgroupAverage.lean:54:22: This simp argument is unused:
+  ← mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [nsmul_eq_mul, hcard]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3150/3289] Replayed BernoulliIso.AverageRange
+warning: BernoulliIso/AverageRange.lean:36:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetOperators.sup_le_rightPeriods`:
+  [Field K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Field K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3151/3289] Replayed BernoulliIso.InputRange
+warning: BernoulliIso/InputRange.lean:25:10: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [3152/3289] Replayed BernoulliIso.Conjugacy
+info: BernoulliIso/Conjugacy.lean:210:0: 'BernoulliIso.measurableEquivOfBijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/Conjugacy.lean:211:0: 'BernoulliIso.conullConjugacyOfRelativeIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/Conjugacy.lean:212:0: 'BernoulliIso.exists_invariant_conull_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3157/3289] Replayed BernoulliIso.MeasuredExtraction
+warning: BernoulliIso/MeasuredExtraction.lean:116:0: automatically included section variable(s) unused in theorem `BernoulliIso.measurable_relativeExtraction`:
+  [StandardBorelSpace Ω]
+  [TopologicalSpace (X 0)]
+  [CompactSpace (X 0)]
+  [IsTopologicalAddGroup (X 0)]
+  [BorelSpace (X 0)]
+  [StandardBorelSpace (X 0)]
+  [∀ (n : ℕ), CompactSpace (Y n)]
+  [∀ (n : ℕ), T2Space (Y n)]
+  [∀ (n : ℕ), IsTopologicalAddGroup (Y n)]
+  [BorelSpace ((n : ℕ) → Y n)]
+  [∀ (n : ℕ), StandardBorelSpace (Y n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [StandardBorelSpace
+  Ω] [TopologicalSpace
+  (X
+    0)] [CompactSpace
+  (X
+    0)] [IsTopologicalAddGroup
+  (X
+    0)] [BorelSpace
+  (X
+    0)] [StandardBorelSpace
+  (X
+    0)] [∀ (n : ℕ),
+  CompactSpace
+    (Y
+      n)] [∀ (n : ℕ),
+  T2Space
+    (Y
+      n)] [∀ (n : ℕ),
+  IsTopologicalAddGroup (Y n)] [BorelSpace ((n : ℕ) → Y n)] [∀ (n : ℕ), StandardBorelSpace (Y n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/MeasuredExtraction.lean:121:0: automatically included section variable(s) unused in theorem `BernoulliIso.bijective_relativeExtraction`:
+  [MeasurableSpace Ω]
+  [StandardBorelSpace Ω]
+  [IsTopologicalAddGroup (X 0)]
+  [MeasurableSpace (X 0)]
+  [BorelSpace (X 0)]
+  [StandardBorelSpace (X 0)]
+  [∀ (n : ℕ), CompactSpace (Y n)]
+  [∀ (n : ℕ), IsTopologicalAddGroup (Y n)]
+  [BorelSpace ((n : ℕ) → Y n)]
+  [∀ (n : ℕ), StandardBorelSpace (Y n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace
+  Ω] [StandardBorelSpace
+  Ω] [IsTopologicalAddGroup
+  (X
+    0)] [MeasurableSpace
+  (X
+    0)] [BorelSpace
+  (X
+    0)] [StandardBorelSpace
+  (X
+    0)] [∀ (n : ℕ),
+  CompactSpace
+    (Y
+      n)] [∀ (n : ℕ),
+  IsTopologicalAddGroup (Y n)] [BorelSpace ((n : ℕ) → Y n)] [∀ (n : ℕ), StandardBorelSpace (Y n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/MeasuredExtraction.lean:195:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/MeasuredExtraction.lean:196:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/MeasuredExtraction.lean:220:0: 'BernoulliIso.ExtractionTower.measurePreserving_extract' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/MeasuredExtraction.lean:221:0: 'BernoulliIso.relativeExtractionIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/MeasuredExtraction.lean:222:0: 'BernoulliIso.exists_conullConjugacy_of_ae_extraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3158/3289] Replayed BernoulliIso.RelativeProducts
+info: BernoulliIso/RelativeProducts.lean:508:0: 'BernoulliIso.RelativeProbabilityIso.pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/RelativeProducts.lean:509:0: 'BernoulliIso.ProbabilityIso.reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/RelativeProducts.lean:510:0: 'BernoulliIso.RelativeProbabilityIso.absorb' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/RelativeProducts.lean:511:0: 'BernoulliIso.RelativeProbabilityIso.absorbFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/RelativeProducts.lean:512:0: 'BernoulliIso.uniformFinite_isAddHaarMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/RelativeProducts.lean:513:0: 'BernoulliIso.infinitePi_isAddHaarMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/RelativeProducts.lean:514:0: 'BernoulliIso.ProbabilityIso.piProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3159/3289] Replayed BernoulliIso.FiniteOrdering
+warning: BernoulliIso/FiniteOrdering.lean:469:0: automatically included section variable(s) unused in theorem `BernoulliIso.MarkerGeometry.packetSelected_fresh`:
+  [Nonempty K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3161/3289] Replayed BernoulliIso.CosetCoordinates
+warning: BernoulliIso/CosetCoordinates.lean:40:8: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.rankChart_fst`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSpace K] [MeasurableSingletonClass K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetCoordinates.lean:43:8: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.rankChart_snd_val`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSpace K] [MeasurableSingletonClass K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetCoordinates.lean:47:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.measurable_rankChart`:
+  [Nonempty K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetCoordinates.lean:285:12: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.measurable_siteStream`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetCoordinates.lean:287:25: Variable name `n` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BernoulliIso/CosetCoordinates.lean:289:8: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.siteStream_covariant`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSpace K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetCoordinates.lean:323:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.siteStream_injective_fiber`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSpace K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetCoordinates.lean:403:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/CosetCoordinates.lean:430:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/CosetCoordinates.lean:536:0: 'BernoulliIso.CosetCoordinates.rankChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CosetCoordinates.lean:537:0: 'BernoulliIso.CosetCoordinates.rankChart_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CosetCoordinates.lean:538:0: 'BernoulliIso.CosetCoordinates.quotientFiberEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CosetCoordinates.lean:540:0: 'BernoulliIso.CosetCoordinates.sortedCosetChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CosetCoordinates.lean:541:0: 'BernoulliIso.CosetCoordinates.relativeSortedCosetChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CosetCoordinates.lean:542:0: 'BernoulliIso.CosetCoordinates.card_quotient_sup_of_disjoint_commute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [3165/3289] Replayed BernoulliIso.SparseRows
+warning: BernoulliIso/SparseRows.lean:128:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hz] at hr
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3168/3289] Replayed BernoulliIso.SplitDynamics
+warning: BernoulliIso/SplitDynamics.lean:19:0: Definition `BernoulliIso.CosetOperators.configurationAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/SplitDynamics.lean:80:0: Definition `BernoulliIso.AlgebraicInput.residualAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/SplitDynamics.lean:166:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.continuous_rangeChart_symm`:
+  [IsTopologicalRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsTopologicalRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3170/3289] Replayed BernoulliIso.Regroup
+warning: BernoulliIso/Regroup.lean:107:0: automatically included section variable(s) unused in theorem `BernoulliIso.Regroup.measurable_linearEquiv_symm`:
+  [Countable A]
+  [MeasurableSingletonClass A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Countable A] [MeasurableSingletonClass A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BernoulliIso/Regroup.lean:180:0: 'BernoulliIso.Regroup.linearEquiv' depends on axioms: [propext, Quot.sound]
+info: BernoulliIso/Regroup.lean:181:0: 'BernoulliIso.Regroup.symm_zero_eq_insertion' depends on axioms: [propext, Quot.sound]
+info: BernoulliIso/Regroup.lean:182:0: 'BernoulliIso.Regroup.linearEquiv_covariant' depends on axioms: [propext, Quot.sound]
+info: BernoulliIso/Regroup.lean:184:0: 'BernoulliIso.Regroup.relativeIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3172/3289] Replayed BernoulliIso.MarkerAdaptation
+warning: BernoulliIso/MarkerAdaptation.lean:211:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3173/3289] Replayed BernoulliIso.LocalChartMeasurability
+warning: BernoulliIso/LocalChartMeasurability.lean:21:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.siteStream_past_measurable`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/LocalChartMeasurability.lean:33:40: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [i, MarkerGeometry.pastRead, MarkerGeometry.digits, MarkerGeometry.address, siteStream]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BernoulliIso/LocalChartMeasurability.lean:95:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.siteStream_fresh_measurable`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [Nonempty K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/LocalChartMeasurability.lean:107:40: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [i, MarkerGeometry.freshRead, MarkerGeometry.digits, MarkerGeometry.address, siteStream]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: BernoulliIso/LocalChartMeasurability.lean:162:0: 'BernoulliIso.CosetCoordinates.siteStream_fresh_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/LocalChartMeasurability.lean:163:0: 'BernoulliIso.CosetCoordinates.cosetPriority_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: BernoulliIso/LocalChartMeasurability.lean:164:0: 'BernoulliIso.CosetCoordinates.sortedCosetChart_rank_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [3174/3289] Replayed BernoulliIso.ConcreteAdaptation
+warning: BernoulliIso/ConcreteAdaptation.lean:86:9: `keepTracks.match_1` refers to an auto-generated auxiliary declaration. These are not stable across refactors; consider using a different approach.
+
+Note: This linter can be disabled with `set_option linter.auxLemma false`
+info: BernoulliIso/ConcreteAdaptation.lean:91:0: 'BernoulliIso.AlgebraicInput.stageInsertion_coeff_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: BernoulliIso/ConcreteAdaptation.lean:92:0: 'BernoulliIso.AlgebraicInput.stageSplitRows_coeff_fresh_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [3176/3289] Replayed BernoulliIso.CosetSelection
+warning: BernoulliIso/CosetSelection.lean:59:0: automatically included section variable(s) unused in theorem `BernoulliIso.FiniteOrdering.winner_precomp_equiv`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetSelection.lean:69:0: automatically included section variable(s) unused in theorem `BernoulliIso.FiniteOrdering.packetSet_precomp`:
+  [Nonempty J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetSelection.lean:139:29: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [MarkerGeometry.blockDigits, MarkerGeometry.digits, MarkerGeometry.address, packetSites, siteStream]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BernoulliIso/CosetSelection.lean:164:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.sortedCosetChart_rank_fiber`:
+  [NeZero κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetSelection.lean:234:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.packetSelected_reindex`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [Fintype I]
+  [Fintype J]
+  [Nonempty J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  K] [Nonempty K] [MeasurableSpace K] [MeasurableSingletonClass K] [Fintype I] [Fintype J] [Nonempty J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/CosetSelection.lean:252:0: automatically included section variable(s) unused in theorem `BernoulliIso.CosetCoordinates.blockDigits_rebase`:
+  [Fintype K]
+  [Nonempty K]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+  [Fintype I]
+  [Fintype J]
+  [Nonempty J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  K] [Nonempty
+  K] [MeasurableSpace
+  K] [MeasurableSingletonClass K] [LinearOrder K] [Fintype I] [Fintype J] [Nonempty J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BernoulliIso/CosetSelection.lean:277:0: 'BernoulliIso.CosetCoordinates.sortedCosetChart_zero_iff_packetSelected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: BernoulliIso/CosetSelection.lean:278:0: 'BernoulliIso.CosetCoordinates.insertionRows_sortedCosetChart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: BernoulliIso/CosetSelection.lean:279:0: 'BernoulliIso.CosetCoordinates.packetSelected_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/CosetSelection.lean:280:0: 'BernoulliIso.CosetCoordinates.packetSelected_changeBase' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3177/3289] Replayed BernoulliIso.SparseTower
+warning: BernoulliIso/SparseTower.lean:214:0: automatically included section variable(s) unused in theorem `BernoulliIso.SparseTower.iterateRows_coeff_measurable`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/SparseTower.lean:237:0: automatically included section variable(s) unused in theorem `BernoulliIso.SparseTower.stageRows_coeff_measurable`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/SparseTower.lean:268:0: automatically included section variable(s) unused in theorem `BernoulliIso.SparseTower.prefixRows_coeff_measurable`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/SparseTower.lean:313:0: automatically included section variable(s) unused in theorem `BernoulliIso.SparseTower.markerHistory_mono`:
+  [CommRing K]
+  [MeasurableSpace Ω]
+  [Countable K]
+  [MeasurableSingletonClass K]
+  [Fintype K]
+  [Nontrivial K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CommRing
+  K] [MeasurableSpace
+  Ω] [Countable K] [MeasurableSingletonClass K] [Fintype K] [Nontrivial K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/SparseTower.lean:320:0: automatically included section variable(s) unused in theorem `BernoulliIso.SparseTower.fresh_le_markerHistory`:
+  [CommRing K]
+  [MeasurableSpace Ω]
+  [Countable K]
+  [MeasurableSingletonClass K]
+  [Fintype K]
+  [Nontrivial K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CommRing
+  K] [MeasurableSpace
+  Ω] [Countable K] [MeasurableSingletonClass K] [Fintype K] [Nontrivial K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3178/3289] Replayed BernoulliIso.ConcreteRecovery
+warning: BernoulliIso/ConcreteRecovery.lean:37:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.concreteMarkerLaw_inclusion`:
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteRecovery.lean:45:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.concrete_rowBound`:
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BernoulliIso/ConcreteRecovery.lean:154:0: 'BernoulliIso.AlgebraicInput.stageSelection_packet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteRecovery.lean:155:0: 'BernoulliIso.AlgebraicInput.ae_concreteTower_extract_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3179/3289] Replayed BernoulliIso.FiniteRegularity
+info: BernoulliIso/FiniteRegularity.lean:126:0: 'BernoulliIso.FiniteStages.continuous_regroupAndRepeat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteRegularity.lean:127:0: 'BernoulliIso.FiniteStages.measurable_regroupAndRepeat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteRegularity.lean:128:0: 'BernoulliIso.ExtractionTower.continuous_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteRegularity.lean:129:0: 'BernoulliIso.ExtractionTower.measurable_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3180/3289] Replayed BernoulliIso.ConcreteRegularity
+warning: BernoulliIso/ConcreteRegularity.lean:69:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.measurable_stageRegroupChart_symm`:
+  [TopologicalSpace K]
+  [DiscreteTopology K]
+  [BorelSpace K]
+  [IsTopologicalRing K]
+  [MeasurableSingletonClass V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace
+  K] [DiscreteTopology K] [BorelSpace K] [IsTopologicalRing K] [MeasurableSingletonClass V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteRegularity.lean:119:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/ConcreteRegularity.lean:165:0: 'BernoulliIso.AlgebraicInput.continuous_concreteOutput' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteRegularity.lean:166:0: 'BernoulliIso.AlgebraicInput.measurable_concreteOutput' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3181/3289] Replayed BernoulliIso.ConcreteDynamics
+warning: BernoulliIso/ConcreteDynamics.lean:63:0: Definition `BernoulliIso.AlgebraicInput.markerAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:78:0: Definition `BernoulliIso.AlgebraicInput.stageCoordinateAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:87:0: Definition `BernoulliIso.AlgebraicInput.stageSpaceAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:99:0: Definition `BernoulliIso.AlgebraicInput.splitOutputAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:106:0: Definition `BernoulliIso.AlgebraicInput.stageOutputAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:111:17: Definition `BernoulliIso.AlgebraicInput.markerAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:111:17: Definition `BernoulliIso.AlgebraicInput.stageCoordinateAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:111:17: Definition `BernoulliIso.AlgebraicInput.stageSpaceAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:111:17: Definition `BernoulliIso.AlgebraicInput.splitOutputAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteDynamics.lean:111:17: Definition `BernoulliIso.AlgebraicInput.stageOutputAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+info: BernoulliIso/ConcreteDynamics.lean:157:0: 'BernoulliIso.AlgebraicInput.concreteStage_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3182/3289] Replayed BernoulliIso.MarkerDynamics
+warning: BernoulliIso/MarkerDynamics.lean:18:0: automatically included section variable(s) unused in theorem `BernoulliIso.MarkerGeometry.measurePreserving_markerShift`:
+  [Countable G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Countable G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BernoulliIso/MarkerDynamics.lean:49:0: 'BernoulliIso.MarkerGeometry.measurePreserving_goodMarkerShift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3183/3289] Replayed BernoulliIso.ConcreteInterleaving
+info: BernoulliIso/ConcreteInterleaving.lean:203:0: 'BernoulliIso.ConcreteInterleaving.cosetInfinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteInterleaving.lean:204:0: 'BernoulliIso.ConcreteInterleaving.absorbCosetTracks' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3185/3289] Replayed BernoulliIso.ConcreteResidualSplit
+warning: BernoulliIso/ConcreteResidualSplit.lean:104:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteResidualSplit.lean:108:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteResidualSplit.lean:109:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteResidualSplit.lean:125:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteResidualSplit.lean:126:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteResidualSplit.lean:153:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/ConcreteResidualSplit.lean:225:0: 'BernoulliIso.AlgebraicInput.relativeUnexpandedSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteResidualSplit.lean:226:0: 'BernoulliIso.AlgebraicInput.relativeUnexpandedSplit_covariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [3186/3289] Replayed BernoulliIso.ConcreteAbsorption
+warning: BernoulliIso/ConcreteAbsorption.lean:125:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.kappaNonempty`:
+  [MeasurableSpace V]
+  [MeasurableSingletonClass V]
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+  [TopologicalSpace K]
+  [DiscreteTopology K]
+  [BorelSpace K]
+  [IsTopologicalRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace
+  V] [MeasurableSingletonClass
+  V] [MeasurableSpace
+  K] [MeasurableSingletonClass
+  K] [LinearOrder K] [TopologicalSpace K] [DiscreteTopology K] [BorelSpace K] [IsTopologicalRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteAbsorption.lean:131:0: Definition `BernoulliIso.AlgebraicInput.infiniteBernoulliAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteAbsorption.lean:153:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:219:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:249:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:253:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:254:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:268:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:269:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:270:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:271:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:272:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:350:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.ambientCosetInfinite_equivariant`:
+  [MeasurableSpace V]
+  [MeasurableSingletonClass V]
+  [TopologicalSpace K]
+  [DiscreteTopology K]
+  [BorelSpace K]
+  [IsTopologicalRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace
+  V] [MeasurableSingletonClass
+  V] [TopologicalSpace K] [DiscreteTopology K] [BorelSpace K] [IsTopologicalRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteAbsorption.lean:371:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:390:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:419:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:420:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteAbsorption.lean:421:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/ConcreteAbsorption.lean:440:0: 'BernoulliIso.AlgebraicInput.residualReservoir' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteAbsorption.lean:441:0: 'BernoulliIso.AlgebraicInput.absorbAllLeftovers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteAbsorption.lean:443:0: 'BernoulliIso.AlgebraicInput.absorbAllLeftovers_equivariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3187/3289] Replayed BernoulliIso.ConcreteOutputLaws
+warning: BernoulliIso/ConcreteOutputLaws.lean:44:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:52:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:60:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:64:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:65:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:69:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:80:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:89:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:100:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:101:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:102:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:103:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:104:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:105:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:118:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:122:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:123:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:127:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:141:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:142:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:143:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:144:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:145:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:146:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:163:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:165:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:167:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:185:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:203:8: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.separateStageOutput_apply`:
+  [MeasurableSpace V]
+  [MeasurableSingletonClass V]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace V] [MeasurableSingletonClass V] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:225:0: Definition `BernoulliIso.AlgebraicInput.stageSurplusAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteOutputLaws.lean:230:0: Definition `BernoulliIso.AlgebraicInput.leftoverAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteOutputLaws.lean:247:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:248:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:249:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:250:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteOutputLaws.lean:240:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.separateAllOutputs_equivariant`:
+  [MeasurableSpace V]
+  [MeasurableSingletonClass V]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace V] [MeasurableSingletonClass V] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BernoulliIso/ConcreteOutputLaws.lean:260:0: 'BernoulliIso.AlgebraicInput.separateAllOutputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3188/3289] Replayed BernoulliIso.ConcreteReservoir
+warning: BernoulliIso/ConcreteReservoir.lean:41:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.stageH_card_repetitions`:
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+  [TopologicalSpace K]
+  [DiscreteTopology K]
+  [BorelSpace K]
+  [IsTopologicalRing K]
+  [MeasurableSpace V]
+  [MeasurableSingletonClass V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace
+  K] [MeasurableSingletonClass
+  K] [LinearOrder
+  K] [TopologicalSpace
+  K] [DiscreteTopology
+  K] [BorelSpace K] [IsTopologicalRing K] [MeasurableSpace V] [MeasurableSingletonClass V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteReservoir.lean:138:4: Unused tactic linter: `change ((i, w), c) = s.stageSurplusSlots n ω' (z.1, g * z.2)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: BernoulliIso/ConcreteReservoir.lean:150:0: Definition `BernoulliIso.AlgebraicInput.excessNonemptyWitness` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteReservoir.lean:150:0: Definition `excessNonemptyWitness` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+warning: BernoulliIso/ConcreteReservoir.lean:172:0: Definition `BernoulliIso.AlgebraicInput.ordinarySiteAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteReservoir.lean:184:0: Definition `BernoulliIso.AlgebraicInput.ordinaryTracksAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/ConcreteReservoir.lean:194:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:195:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:196:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:205:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:206:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:207:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:208:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:209:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:210:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:225:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:226:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:227:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:228:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:229:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:230:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:232:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:234:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:236:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteReservoir.lean:238:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/ConcreteReservoir.lean:251:0: 'BernoulliIso.AlgebraicInput.allOutputsToBernoulli' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3189/3289] Replayed BernoulliIso.ConcreteMeasured
+warning: BernoulliIso/ConcreteMeasured.lean:26:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.concreteMarkerLaw_preserving`:
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteMeasured.lean:34:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteMeasured.lean:87:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteMeasured.lean:89:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteMeasured.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/ConcreteMeasured.lean:144:0: 'BernoulliIso.AlgebraicInput.exists_concreteRecoverySet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteMeasured.lean:145:0: 'BernoulliIso.AlgebraicInput.concreteExtraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteMeasured.lean:147:0: 'BernoulliIso.AlgebraicInput.finiteDataToReservoir' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3190/3289] Replayed BernoulliIso.FullRecoveryDomain
+warning: BernoulliIso/FullRecoveryDomain.lean:42:0: Definition `BernoulliIso.AlgebraicInput.fullMarkerAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/FullRecoveryDomain.lean:55:0: Definition `BernoulliIso.AlgebraicInput.fullRecoveryAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/FullRecoveryDomain.lean:66:0: Definition `BernoulliIso.AlgebraicInput.recoveryMarkerAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+info: BernoulliIso/FullRecoveryDomain.lean:192:0: 'BernoulliIso.AlgebraicInput.ae_fullRecoverySet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FullRecoveryDomain.lean:193:0: 'BernoulliIso.AlgebraicInput.recoveryFullEquiv_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FullRecoveryDomain.lean:194:0: 'BernoulliIso.AlgebraicInput.overFullRecovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3191/3289] Replayed BernoulliIso.FiniteBernoulliModels
+warning: BernoulliIso/FiniteBernoulliModels.lean:17:0: Definition `BernoulliIso.bernoulliAction` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: BernoulliIso/FiniteBernoulliModels.lean:38:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/FiniteBernoulliModels.lean:110:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.stageH_zero_eq_bot`:
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/FiniteBernoulliModels.lean:244:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.finiteBase_card`:
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/FiniteBernoulliModels.lean:246:39: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteBase, Fintype.card_prod, pow_succ, Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BernoulliIso/FiniteBernoulliModels.lean:248:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.finiteBase_card_gt_one`:
+  [MeasurableSpace K]
+  [MeasurableSingletonClass K]
+  [LinearOrder K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace K] [MeasurableSingletonClass K] [LinearOrder K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BernoulliIso/FiniteBernoulliModels.lean:268:0: 'BernoulliIso.AlgebraicInput.finiteBernoulliIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteBernoulliModels.lean:269:0: 'BernoulliIso.AlgebraicInput.finiteBernoulliEquiv_covariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteBernoulliModels.lean:270:0: 'BernoulliIso.AlgebraicInput.finiteBase_square_card_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteBernoulliModels.lean:272:0: 'BernoulliIso.AlgebraicInput.doubleFiniteBernoulliIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteBernoulliModels.lean:273:0: 'BernoulliIso.AlgebraicInput.doubleFiniteBernoulliIso_covariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3192/3289] Replayed BernoulliIso.ProbabilityTransport
+info: BernoulliIso/ProbabilityTransport.lean:109:0: 'BernoulliIso.ProbabilityIso.conullRestrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ProbabilityTransport.lean:110:0: 'BernoulliIso.ConullConjugacy.transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3193/3289] Replayed BernoulliIso.ConcreteFiniteSquare
+warning: BernoulliIso/ConcreteFiniteSquare.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:91:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:92:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:93:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:94:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:146:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:141:0: automatically included section variable(s) unused in theorem `BernoulliIso.AlgebraicInput.absorbFullMarker_covariant`:
+  [LinearOrder K]
+  [MeasurableSpace V]
+  [MeasurableSingletonClass V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder K] [MeasurableSpace V] [MeasurableSingletonClass V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:156:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:157:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:158:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BernoulliIso/ConcreteFiniteSquare.lean:159:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: BernoulliIso/ConcreteFiniteSquare.lean:244:0: 'BernoulliIso.AlgebraicInput.relativeFiniteSquare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/ConcreteFiniteSquare.lean:245:0: 'BernoulliIso.AlgebraicInput.finiteBaseSquareConjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9098/9103] Replayed UpstreamFoundation
+info: UpstreamFoundation.lean:3224:0: 'OAI.mersenne_21701_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9099/9103] Replayed UpstreamConstruction
+warning: UpstreamConstruction.lean:487:28: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+info: UpstreamConstruction.lean:9121:0: 'OAI.KaplanskyCounterexample.AssignedDevelopment.point_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: UpstreamConstruction.lean:9122:0: 'OAI.KaplanskyCounterexample.Rectangular.identities' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: UpstreamConstruction.lean:9123:0: 'OAI.KaplanskyCounterexample.Prescription.Output.success' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: UpstreamConstruction.lean:9124:0: 'OAI.KaplanskyCounterexample.Prescription.Output.X_global' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: UpstreamConstruction.lean:9125:0: 'OAI.KaplanskyCounterexample.Prescription.Output.X_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9100/9103] Replayed CertifiedInput
+warning: CertifiedInput.lean:78:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: CertifiedInput.lean:159:0: 'BernoulliIso.Upstream.point_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CertifiedInput.lean:160:0: 'BernoulliIso.Upstream.rectangle_identities' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CertifiedInput.lean:161:0: 'BernoulliIso.Upstream.strict_surplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CertifiedInput.lean:162:0: 'BernoulliIso.Upstream.algebraicInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9101/9103] Replayed BernoulliIso.FiniteBaseCertificate
+info: BernoulliIso/FiniteBaseCertificate.lean:69:0: 'BernoulliIso.FiniteBaseCertificate.conjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: BernoulliIso/FiniteBaseCertificate.lean:70:0: 'BernoulliIso.FiniteBaseCertificate.unequal_finite_bernoulli_shifts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [9102/9103] Replayed Solution
+warning: Solution.lean:51:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Solution.lean:53:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Solution.lean:67:0: 'BernoulliCertificate.unequal_finite_bernoulli_shifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (9103 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BernoulliCertificate.unequal_finite_bernoulli_shifts, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

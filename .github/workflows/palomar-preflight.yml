@@ -1,0 +1,20 @@
+name: Palomar mechanical preflight
+
+# Manual only: publication and registry registration remain separate actions.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@c02bbeaed888df45c4e28c4e99dba540ad21552a
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: c02bbeaed888df45c4e28c4e99dba540ad21552a
+      request_id: preflight002
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"project_path":"lean","comparator_config_path":"lean/comparator.json","formalization_metadata_path":"lean/formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}'

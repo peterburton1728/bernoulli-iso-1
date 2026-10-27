@@ -1,0 +1,19 @@
+{
+  "body_byte_identical": true,
+  "math_macros_and_title_metadata_identical": true,
+  "included_all_bases_unchanged": true,
+  "body_sha256": "ed536d2823ccfe7fa37c72015efae3e1962c64a322b2a813bf41ea24b914e7d6",
+  "styled_source_sha256": "a26b3c9731406dc63ec85c9f06f39a5896c9702b901a3413fa8537f801c46c2e",
+  "compiled_pdf_sha256": "f10e9446244d5baff3dd650e30ba5cff951bb72e138c5372e6bccf6da5eb20cd",
+  "pdf_pages": 18,
+  "reference": "10-02_frozens/ent-return_frozen_10-02.tex",
+  "visual_review": "All-page contact sheet plus full-size title, theorem and final reference pages; no clipping or overflow.",
+  "formatting_changes_confined_to_preamble": true,
+  "explicit_etoolbox_dependency": true,
+  "dependency_fix_renders_identically": true,
+  "scope": "Formatting operation preserved body/title/math macros exactly. This validation predates subsequent author edits; the released PDF is the later author-edited compilation.",
+  "release_pdf_sha256": "c68b6ca891921fbd923efbcd4b215401736483c53f4a1e80141ee70821e28fca",
+  "release_note_source_sha256_observed": "f5d83121125a957ed31cc57b630a7da9a33be62c6c5e1466a9ef1c604f25edb0",
+  "author_edits_preserved": true,
+  "release_pdf_visual_review": "Author-edited 18-page PDF reviewed: title page and all-page contact sheet; no clipping or layout defects observed."
+}

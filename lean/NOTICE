@@ -1,0 +1,18 @@
+Finite-base Bernoulli isomorphism certificate
+Copyright 2026 Peter Burton
+
+The Lean sources and build/verification materials contributed by this project
+are licensed under the Apache License, Version 2.0 (LICENSE).
+Mathematical development and formalization were prepared with material
+GPT-6 assistance, including Astra and Sol phases, under Peter Burton's direction.
+
+Algebraic input: OpenAI's Kaplansky direct-finiteness counterexample development,
+pinned at adc7f1241b42e322a6451854ab7e4b4c146bf78a in openai/math.
+The upstream Apache-2.0 license and source copyright notices are retained.
+UpstreamFoundation.lean and UpstreamConstruction.lean bundle the pinned
+algebraic proof bodies with a recorded Lean API/module compatibility port.
+CertifiedInput.lean adapts that construction to the subgroup rectangle interface.
+See provenance/ for exact source hashes and the release transformation record.
+
+An accompanying manuscript PDF is a separate writing artifact. This notice
+does not assign a new license to that manuscript.

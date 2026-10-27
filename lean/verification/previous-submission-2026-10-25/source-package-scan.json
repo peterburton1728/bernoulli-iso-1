@@ -1,0 +1,360 @@
+{
+  "check": "source-only lexical packaging scan",
+  "errors": [],
+  "checkout_bytes_excluding_git_lake_symlinks": 1725200,
+  "lean_source_count": 58,
+  "challenge_deliberate_sorry_count": 1,
+  "lean_files": [
+    {
+      "path": "Audit.lean",
+      "lines": 121,
+      "bytes": 7205
+    },
+    {
+      "path": "BernoulliIso.lean",
+      "lines": 7,
+      "bytes": 85
+    },
+    {
+      "path": "CertifiedInput.lean",
+      "lines": 165,
+      "bytes": 5787
+    },
+    {
+      "path": "Challenge.lean",
+      "lines": 52,
+      "bytes": 2380
+    },
+    {
+      "path": "Solution.lean",
+      "lines": 67,
+      "bytes": 3376
+    },
+    {
+      "path": "UpstreamConstruction.lean",
+      "lines": 9125,
+      "bytes": 375352
+    },
+    {
+      "path": "UpstreamFoundation.lean",
+      "lines": 3225,
+      "bytes": 134010
+    },
+    {
+      "path": "BernoulliIso/AlgebraicInput.lean",
+      "lines": 54,
+      "bytes": 1550
+    },
+    {
+      "path": "BernoulliIso/AlgebraicSplit.lean",
+      "lines": 109,
+      "bytes": 3331
+    },
+    {
+      "path": "BernoulliIso/AmbientCharts.lean",
+      "lines": 100,
+      "bytes": 4282
+    },
+    {
+      "path": "BernoulliIso/AmbientGroup.lean",
+      "lines": 251,
+      "bytes": 8716
+    },
+    {
+      "path": "BernoulliIso/AverageRange.lean",
+      "lines": 117,
+      "bytes": 4302
+    },
+    {
+      "path": "BernoulliIso/CompactExtraction.lean",
+      "lines": 79,
+      "bytes": 3156
+    },
+    {
+      "path": "BernoulliIso/CompactProbability.lean",
+      "lines": 57,
+      "bytes": 2239
+    },
+    {
+      "path": "BernoulliIso/ConcreteAbsorption.lean",
+      "lines": 443,
+      "bytes": 21778
+    },
+    {
+      "path": "BernoulliIso/ConcreteAdaptation.lean",
+      "lines": 92,
+      "bytes": 4402
+    },
+    {
+      "path": "BernoulliIso/ConcreteDynamics.lean",
+      "lines": 157,
+      "bytes": 6194
+    },
+    {
+      "path": "BernoulliIso/ConcreteFiniteSquare.lean",
+      "lines": 245,
+      "bytes": 11680
+    },
+    {
+      "path": "BernoulliIso/ConcreteInterleaving.lean",
+      "lines": 204,
+      "bytes": 9704
+    },
+    {
+      "path": "BernoulliIso/ConcreteLocality.lean",
+      "lines": 76,
+      "bytes": 3183
+    },
+    {
+      "path": "BernoulliIso/ConcreteMeasured.lean",
+      "lines": 147,
+      "bytes": 7397
+    },
+    {
+      "path": "BernoulliIso/ConcreteOutputLaws.lean",
+      "lines": 260,
+      "bytes": 11901
+    },
+    {
+      "path": "BernoulliIso/ConcreteRecovery.lean",
+      "lines": 155,
+      "bytes": 7904
+    },
+    {
+      "path": "BernoulliIso/ConcreteRegularity.lean",
+      "lines": 166,
+      "bytes": 7677
+    },
+    {
+      "path": "BernoulliIso/ConcreteReservoir.lean",
+      "lines": 251,
+      "bytes": 11977
+    },
+    {
+      "path": "BernoulliIso/ConcreteResidualSplit.lean",
+      "lines": 226,
+      "bytes": 10711
+    },
+    {
+      "path": "BernoulliIso/ConcreteRows.lean",
+      "lines": 86,
+      "bytes": 3744
+    },
+    {
+      "path": "BernoulliIso/ConcreteSplit.lean",
+      "lines": 110,
+      "bytes": 4285
+    },
+    {
+      "path": "BernoulliIso/ConcreteTower.lean",
+      "lines": 136,
+      "bytes": 5977
+    },
+    {
+      "path": "BernoulliIso/Conjugacy.lean",
+      "lines": 212,
+      "bytes": 10026
+    },
+    {
+      "path": "BernoulliIso/CosetCoordinates.lean",
+      "lines": 542,
+      "bytes": 26554
+    },
+    {
+      "path": "BernoulliIso/CosetSelection.lean",
+      "lines": 280,
+      "bytes": 12194
+    },
+    {
+      "path": "BernoulliIso/FiniteBaseCertificate.lean",
+      "lines": 70,
+      "bytes": 2752
+    },
+    {
+      "path": "BernoulliIso/FiniteBernoulliModels.lean",
+      "lines": 273,
+      "bytes": 12142
+    },
+    {
+      "path": "BernoulliIso/FiniteOrdering.lean",
+      "lines": 501,
+      "bytes": 22300
+    },
+    {
+      "path": "BernoulliIso/FiniteRegularity.lean",
+      "lines": 129,
+      "bytes": 5152
+    },
+    {
+      "path": "BernoulliIso/FiniteStages.lean",
+      "lines": 156,
+      "bytes": 6089
+    },
+    {
+      "path": "BernoulliIso/FullRecoveryDomain.lean",
+      "lines": 194,
+      "bytes": 9089
+    },
+    {
+      "path": "BernoulliIso/GroupRingAction.lean",
+      "lines": 202,
+      "bytes": 7659
+    },
+    {
+      "path": "BernoulliIso/InputOperators.lean",
+      "lines": 61,
+      "bytes": 2239
+    },
+    {
+      "path": "BernoulliIso/InputRange.lean",
+      "lines": 117,
+      "bytes": 4292
+    },
+    {
+      "path": "BernoulliIso/LocalChartMeasurability.lean",
+      "lines": 164,
+      "bytes": 7823
+    },
+    {
+      "path": "BernoulliIso/Marker.lean",
+      "lines": 368,
+      "bytes": 15721
+    },
+    {
+      "path": "BernoulliIso/MarkerAdaptation.lean",
+      "lines": 218,
+      "bytes": 9740
+    },
+    {
+      "path": "BernoulliIso/MarkerDynamics.lean",
+      "lines": 49,
+      "bytes": 2084
+    },
+    {
+      "path": "BernoulliIso/MeasuredExtraction.lean",
+      "lines": 222,
+      "bytes": 10265
+    },
+    {
+      "path": "BernoulliIso/ProbabilityTransport.lean",
+      "lines": 110,
+      "bytes": 4902
+    },
+    {
+      "path": "BernoulliIso/Recovery.lean",
+      "lines": 122,
+      "bytes": 4675
+    },
+    {
+      "path": "BernoulliIso/Regroup.lean",
+      "lines": 184,
+      "bytes": 7781
+    },
+    {
+      "path": "BernoulliIso/RelativeProducts.lean",
+      "lines": 514,
+      "bytes": 26641
+    },
+    {
+      "path": "BernoulliIso/Selection.lean",
+      "lines": 233,
+      "bytes": 10830
+    },
+    {
+      "path": "BernoulliIso/SparseRows.lean",
+      "lines": 202,
+      "bytes": 8096
+    },
+    {
+      "path": "BernoulliIso/SparseTower.lean",
+      "lines": 441,
+      "bytes": 21119
+    },
+    {
+      "path": "BernoulliIso/SplitDynamics.lean",
+      "lines": 203,
+      "bytes": 8416
+    },
+    {
+      "path": "BernoulliIso/SplitRows.lean",
+      "lines": 112,
+      "bytes": 4784
+    },
+    {
+      "path": "BernoulliIso/StageSchedule.lean",
+      "lines": 54,
+      "bytes": 1845
+    },
+    {
+      "path": "BernoulliIso/SubgroupAverage.lean",
+      "lines": 69,
+      "bytes": 2802
+    },
+    {
+      "path": "BernoulliIso/Survival.lean",
+      "lines": 90,
+      "bytes": 3631
+    }
+  ],
+  "observed_lean_sha256": {
+    "Audit.lean": "99d585327765d959113f0726cc5527cc17e9ee48ba3ca37fc37df7aa175e28c3",
+    "BernoulliIso.lean": "66447568d3ee924a7f448bfc0feff9fc5ac44f5fa3db3c6aa706bf66149ffdf5",
+    "CertifiedInput.lean": "1edf06963ad437a89ee762065b883744876a31bacb84087b891d918e77ddd537",
+    "Challenge.lean": "d6f2947448dfb8670deca3d7186379e83a448e07edce5687ea0737924acb05c1",
+    "Solution.lean": "f6403abfd14d0092c9fee2f64aae9af1cf34939efc2109e3479734a1390f1f00",
+    "UpstreamConstruction.lean": "3746c44f7b0b7f90063a1c040c62fcdaf831ebc86bd33b70a7dbfe9a6339ef6c",
+    "UpstreamFoundation.lean": "761f029ab51b0b87dcbafdfcca62938d7b4d0605c8711440daed2acbb1e152ef",
+    "BernoulliIso/AlgebraicInput.lean": "e3e3ffd953a21b5b3c0b032c6f82f1a223cb1cc9466c2d37eae975732f746bfe",
+    "BernoulliIso/AlgebraicSplit.lean": "309955aadbd25d3b5b6a11624f5dc7113d8cd057f8a48b515950f35d5b8dc4e3",
+    "BernoulliIso/AmbientCharts.lean": "24c07240533057ce04d7d8216085082c66f28b4761dc7fd144a5d88e2497a65a",
+    "BernoulliIso/AmbientGroup.lean": "3e84dac59006c037f51aec5faa3be9e44cf5cf2928ac115adeac58a2492b6cfa",
+    "BernoulliIso/AverageRange.lean": "f71363bf46564da229e1ac45768e39c4a49bff7fcb3d0689bd8cc8540196d3a5",
+    "BernoulliIso/CompactExtraction.lean": "3cd4c7a84fb1a4f04927fbdade966bc6b842eefe481c416a573d225222a4957a",
+    "BernoulliIso/CompactProbability.lean": "0b27b4f10ecdb6795c9501c7fec0f8658d0419ca8545f6e7c79bbe62fed884d4",
+    "BernoulliIso/ConcreteAbsorption.lean": "3deafdafbbca2b5360bf3fce4510d55330f848acdd4aa5e30be86dc6e2461991",
+    "BernoulliIso/ConcreteAdaptation.lean": "56cfbf492fbce0722e40f6f67d97ea73e180e0e633861deff45c77fcb9778e72",
+    "BernoulliIso/ConcreteDynamics.lean": "69229a0e3fe962005528f1ef6f2f6fd5beb1861ece32cfbba3518b44f914b015",
+    "BernoulliIso/ConcreteFiniteSquare.lean": "fc439cc2786762c5822497cdf71aa2f22fe30a39b246d51d3445944fe10dda10",
+    "BernoulliIso/ConcreteInterleaving.lean": "d8cd0af12e826262658458f8b180e43809a6555d65e12257c9da214e104dcc11",
+    "BernoulliIso/ConcreteLocality.lean": "bacab8c3ac0399b679f2639ff09724186f5815515824e0abec74ca80f742ed9e",
+    "BernoulliIso/ConcreteMeasured.lean": "00f51af002a1810576313ad02dc017a1d355b35e07e063f4a933a81fab5f6614",
+    "BernoulliIso/ConcreteOutputLaws.lean": "bf768c4693736a3b4affa13d2e3521a90abdac21c9a610cbf223df4d8cf8dc48",
+    "BernoulliIso/ConcreteRecovery.lean": "b9fd9183508c1663b4e3cb4cd4965a3b9cc6788d1b6940eda53ec6ba34036ea0",
+    "BernoulliIso/ConcreteRegularity.lean": "b34721fb64be127c41ed758a374afd289f934be3aa308ee25ecfe087398cf3bd",
+    "BernoulliIso/ConcreteReservoir.lean": "7d5f8450ab5ee2ea493a317629e52b05d159e43abe7fb0f67b3b611a45eb1cb4",
+    "BernoulliIso/ConcreteResidualSplit.lean": "8a1455c56924fe094842c7517d8744c451e63842e9d2e5eb02e1b37626938b10",
+    "BernoulliIso/ConcreteRows.lean": "775775f43ce812fa1eebacd08f05d463ef68ed7210baf61dadc1ff7f697529e6",
+    "BernoulliIso/ConcreteSplit.lean": "7ea028fd55be38543ffedd804b41f30b8b1b0581018cea218a4f54d8fe558452",
+    "BernoulliIso/ConcreteTower.lean": "ec67c4334daea4b6b03b29a190cbe77be26c0fd25e31373c6925a32eb47e27a0",
+    "BernoulliIso/Conjugacy.lean": "f81eedcf3a2eb859767c9358d50b5fa37443208aeddbf324b0743039cacdbd0b",
+    "BernoulliIso/CosetCoordinates.lean": "517533b200c23ec368b52f6ce03d42b4e5788dc67ff9001983d5da606a077d31",
+    "BernoulliIso/CosetSelection.lean": "4de52f957bcb64fa42e8224bcff32e0c902396f524e4857087261c9f462942a5",
+    "BernoulliIso/FiniteBaseCertificate.lean": "42581c1ea6032b13321e9d57f9ac1595b800eddc8bb79378e373719734fc4e44",
+    "BernoulliIso/FiniteBernoulliModels.lean": "348b31653d4caf5949064af12d3c38712dfdb5602d4ee41c45602dbfa98a089b",
+    "BernoulliIso/FiniteOrdering.lean": "2f3f5fef38906f3dbcb79bb524b7641ce49ee6dfb81d9da93c3247168056787b",
+    "BernoulliIso/FiniteRegularity.lean": "57510db259725e1d7c9643434540d51683d92eaa7a56548b7b24744a98e9121b",
+    "BernoulliIso/FiniteStages.lean": "4694a5fb82d036c41b6004be0ef8b395fc854bd76ab1f47b01fe29dec7339e8a",
+    "BernoulliIso/FullRecoveryDomain.lean": "e5b2b40c1cd21cfd62fe88746e388a8f4f266d3d086dfd884d621a45c81f9f6a",
+    "BernoulliIso/GroupRingAction.lean": "b58589f134ab0afe97c709cdb9497874544906192c5b58d25b1a8a9bb894c671",
+    "BernoulliIso/InputOperators.lean": "5a04fe162306a7836b47eeb8793ea1597734b7b0814a1e4ec2ded3dfb2cf2044",
+    "BernoulliIso/InputRange.lean": "60fc92855cc2aa4898fca8c7d9bdaa516ec33b887be66fdd5adb8f84af45f1a6",
+    "BernoulliIso/LocalChartMeasurability.lean": "6c68e95a60b6cb144399ca8ec435a63761dcae44582ba833a78e60a4fc4a6003",
+    "BernoulliIso/Marker.lean": "41e836d7e9e1689dc1a184146731625186624e9e545f21b5697ccf792f5519eb",
+    "BernoulliIso/MarkerAdaptation.lean": "5b28b251cbdc6d67116f110e001c32d67b47bc19f88de2ec4c8e94b468919730",
+    "BernoulliIso/MarkerDynamics.lean": "6c57b2c4e5dace82dbf1ffd9693fd2cc57c4dc9bd7a958b3a824dcf2dc3590d8",
+    "BernoulliIso/MeasuredExtraction.lean": "fcd49c67b4e63f41405c99527c2291d3045bb5816a7d6c0f3ebf8f7c29b20249",
+    "BernoulliIso/ProbabilityTransport.lean": "0839bfd6235bec5aa3f0e20254ec549aaf792e5bae82a38b5efd4e9176f36409",
+    "BernoulliIso/Recovery.lean": "2b02dfbf674273653ac8444927844ccd399ae93223732d1fb9be8dce61886898",
+    "BernoulliIso/Regroup.lean": "dbaf20ff2317590cd33b0c027ce80a9b6e85fae1f13dcb82539f8087e594b4c0",
+    "BernoulliIso/RelativeProducts.lean": "62e8898ef2770d717f91bf74210737950c28558a4f442286b6b9e70336e164cd",
+    "BernoulliIso/Selection.lean": "93b69a0eb116b19439d6212b0134ef040cec582d5db9f63a96387d5745abdb74",
+    "BernoulliIso/SparseRows.lean": "c245cbdbe9812fdac0c1dc92a500e9bf146a93e560b348e222ee5f157fecb9c3",
+    "BernoulliIso/SparseTower.lean": "dd5a503a5ea1136cb489299b0df74942568e6fc1a4beab5e7d8f43db1ec7fe72",
+    "BernoulliIso/SplitDynamics.lean": "8f5c19076c1f27a502a9496c7c0bc1499b16e21a50ac1f210da1d37c88e36a35",
+    "BernoulliIso/SplitRows.lean": "38cf6a7e84462d4233847d25a86464c6d982a9696a5edb73135eea6081e320a9",
+    "BernoulliIso/StageSchedule.lean": "1451be1e2a339624fd14bce24bb628db637a346998c92ad0d9d870d3b6d523a9",
+    "BernoulliIso/SubgroupAverage.lean": "ffe119b330e09b103cfdd7add3ac776f34d9c18722b3e6c0ee7ee7603fdb7990",
+    "BernoulliIso/Survival.lean": "f68cdb5402695d703293be827261654e1d4b2e96026abd07a43c0e78274cbd92"
+  },
+  "limits": "Does not parse Lean, authenticate manifests, detect all metaprogramming, inspect axioms/proof terms, validate YAML/licensee, or run Palomar."
+}

@@ -1,0 +1,13 @@
+{
+  "source_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "target_lean": "4.35.0",
+  "files": [
+    {
+      "module": "OAI.RingTheory.DirectFiniteness.SlabAvoidance",
+      "path": "OAI/RingTheory/DirectFiniteness/SlabAvoidance.lean",
+      "original_sha256": "902ff90abb321669ead978c87d991891c6688310d5360db829a379949768e7fe",
+      "ported_sha256": "f84340ac268d5bd2221da4baefccaf7ae454717614c454941abcaa980a2ce09b",
+      "reason": "Mathlib 4.35 migrated uniform finite PMFs to uniformOfFinset measures; restore the old automatic probability instance by proving the finite uniform measure has total mass one. The probability measure and counting argument are unchanged."
+    }
+  ]
+}

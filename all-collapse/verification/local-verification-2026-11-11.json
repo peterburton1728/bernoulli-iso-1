@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-11-11",
+  "scope": "Local macOS arm64 checks made before submission; no Linux sandbox and no hosted Palomar run. This file is part of the submitted commit and cannot report Palomar's verification of it.",
+  "layout": "Folder all-collapse/ of the repository; all commands run in that folder of a fresh clone.",
+  "lean_version": "4.35.0",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "nanoda_version": "0.4.19",
+  "nanoda_workers": 4,
+  "nanoda_worker_stack": "default 16 MiB",
+  "theorem": "AllCollapse.all_bernoulli_shifts_isomorphic",
+  "checks": {
+    "lake exe cache get; lake build Solution Challenge": "passed, 9092 jobs, built from scratch",
+    "axioms of the compared theorem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "python3 check_package.py .": "no errors; 44 Lean files; longest 9125 lines; one deliberate sorry in Challenge.lean",
+    "leanexport Solution + stock nanoda_bin, unpermitted axioms as hard error": "accepted; export 644403402 bytes",
+    "lake comparator": "Not run on this layout. It was run earlier on 11 November on the same Lean sources laid out at a repository root (output: comparator-2026-11-11-earlier-layout.txt): 'lake comparator --config comparator.json --inadvisably-no-sandbox', exit 0, 'Your solution is okay!', an unsandboxed diagnostic. Since that run, Challenge.lean, Solution.lean, comparator.json, lakefile.toml, lake-manifest.json and lean-toolchain are byte-identical, and the only changes to Lean files are 47 comment lines in Collapse/.",
+    "con-ron": "not run",
+    "hosted Palomar preflight": "not run at the time of writing"
+  },
+  "pinned_input_sha256": {
+    "UpstreamConstruction.lean": "3746c44f7b0b7f90063a1c040c62fcdaf831ebc86bd33b70a7dbfe9a6339ef6c",
+    "UpstreamFoundation.lean": "e95ac5fd539e49ec4c4f1ff99417d06c882972ff01fd5dd0f91922af7c094c50",
+    "CertifiedInput.lean": "1edf06963ad437a89ee762065b883744876a31bacb84087b891d918e77ddd537",
+    "BernoulliIso/CheckpointPrimeCertificate.lean": "15e031c6ab2bf504ae97f5f501eb064cd39dcc5461f03552dc7a67812d137047",
+    "lake-manifest.json": "6571142f9fff5ad8cfbb3592c450bedc256bce018eb6512233401265a2dc665a",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "note": "The pinned input files and the other reused files are byte-identical to those of ../lean/ (registered entry PALOMAR-2026-10-27-000030). No human has reviewed the proofs."
+}

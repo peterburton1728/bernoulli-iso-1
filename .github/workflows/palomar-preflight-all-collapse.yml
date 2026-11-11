@@ -1,0 +1,20 @@
+name: Palomar mechanical preflight (all-collapse)
+
+# Manual only: publication and registry registration remain separate actions.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+      request_id: allcollapse1
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"project_path":"all-collapse","comparator_config_path":"all-collapse/comparator.json","formalization_metadata_path":"all-collapse/formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}'

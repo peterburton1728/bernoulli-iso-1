@@ -1,0 +1,113 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: v0.4
+project:
+  name: A countable group all of whose nontrivial Bernoulli shifts are isomorphic
+  description: >-
+    There is a countable group G such that the Bernoulli shifts of G with bases
+    (L, lambda) and (L', lambda') are isomorphic for all standard probability
+    spaces whose measures are not point masses: there is an equivariant,
+    measure-preserving bijection, measurable in both directions, between
+    shift-invariant measurable sets of full measure. No condition is put on the
+    entropies of the bases, which may differ and may be infinite. The group is
+    N x (Z/2 wr Z), where N is the group of the pinned OpenAI construction,
+    which supplies the algebraic existence input. This formalization does not
+    certify finitary or continuous conjugacy and says nothing about other
+    groups.
+  authors: [Peter Burton]
+  responsible_maintainers: [Peter Burton]
+  license: Apache-2.0
+sources:
+  - title: Finitary collapse of Bernoulli shifts from an algebraic splitting
+    authors: [Peter Burton]
+    type: paper
+    relationship: independently-proves
+    id: https://doi.org/10.5281/zenodo.23716010
+    location: Theorem "All-base finitary collapse", in its measurable form for standard probability bases
+    note: >-
+      GPT-6 written draft dated 25 October 2026, public since 27 October 2026
+      as bernoulli-iso.pdf at the root of this repository (release v1.0.0,
+      archived under the DOI above). It states that any two nontrivial
+      Bernoulli shifts of G with Polish probability bases are topo-finitarily
+      conjugate, and derives this from its finite-uniform theorem and two
+      theorems of Meyerovitch and Spinka. This entry certifies only the
+      measurable isomorphism, by a different proof which does not use those
+      theorems. The draft's own proof of its all-base theorem is not
+      formalized here. The all-base statement, in measurable form and by a
+      different proof, is as of 11 November 2026 under human review as part of
+      the upcoming article "Lossless undersampling by the coprime Radon
+      transform: nonsoficity and paradoxical ergodic theory" by Peter Burton.
+  - title: "Lossless undersampling by the coprime Radon transform: nonsoficity and paradoxical ergodic theory"
+    authors: [Peter Burton]
+    type: other
+    relationship: formalizes
+    location: Absorption lemma; collapse theorem; dictionary between local spaces and extensions; collapse of extensions
+    note: >-
+      Not public, so a reader cannot confirm it, and no priority is claimed
+      from it. As of 2026-11-11 this article is actively being written by
+      Peter Burton with AI assistance. The library Collapse/ formalizes its
+      chain of results named above, for the pinned algebraic input. The last step of the proof, a
+      pairing argument which passes from one base to all bases, is not in the
+      manuscript; it was devised during this formalization (see automation).
+  - title: A Counterexample to Kaplansky's Direct-Finiteness Conjecture in Characteristic Two
+    authors: [OpenAI]
+    type: paper
+    relationship: adapts
+    id: https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026
+    location: Subgroup averages and a rectangular identity; finite incidence prescription
+    note: >-
+      Supplies the algebraic existence input, reused byte for byte from the
+      registered entry PALOMAR-2026-10-27-000030. Its result is not credited to
+      this project.
+related_formalizations:
+  - id: https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/RingTheory/DirectFiniteness
+    relationship: builds-on
+    note: Pinned algebraic construction; upstream Apache-2.0 notices and port provenance are kept.
+  - id: PALOMAR-2026-10-27-000030
+    relationship: builds-on
+    note: >-
+      The registered entry for finite uniform bases, in the folder lean/ of the
+      same repository. Its pinned algebraic input, its conjugacy definitions and
+      its ambient group are reused byte for byte; its proof is not. The
+      present statement implies the registered one mathematically; that
+      implication is not formalized.
+classification:
+  arxiv: [math.DS, math.GR]
+  msc2020: [37A35, 37A20]
+automation:
+  methods:
+    - method: agent
+      models: [Claude Fable 5.2, Claude Opus 5.5]
+      framework: Claude Code
+      tool_setup: >-
+        One governing session (Claude Fable 5.2) wrote every definition and
+        statement of the library Collapse/, devised the pairing argument, and
+        wrote the briefs; 22 subagent runs (Claude Opus) wrote the proofs, one
+        file each, about 2.4 million tokens in all. For each merge the governing
+        session checked that no statement had changed and ran a gate: build,
+        axiom audit, and stock NanoDa 0.4.19 on the export. The reused files
+        of the registered entry were produced with GPT-6 Astra and Sol, as
+        disclosed there.
+  notes: >-
+    The human author chose the target theorem, approved the wording of the
+    compared statement, and directed the work. AI systems are credited here
+    and are not listed as authors or maintainers.
+review:
+  status: unchecked
+  notes: >-
+    Review before submission: none of the proofs, by a human or by a separate
+    system. The human author read and approved the compared statement in
+    Challenge.lean. Machine checks made before submission, on macOS arm64, are
+    recorded in PALOMAR.md and verification/. This file is part of the
+    submitted commit and therefore cannot report Palomar's hosted
+    verification of that commit; for that, see Palomar's own record.
+fidelity:
+  divergences: >-
+    The compared claim is measurable isomorphism of all nontrivial Bernoulli
+    shifts of one countable group. The cited draft states more (finitary and
+    topological conjugacy, finitely presented and graph formulations); none
+    of that is certified. Entropy is not formalized: that the bases may have
+    different entropy is a remark on the hypotheses. Novelty: an AI-assisted,
+    non-exhaustive literature search on 10 November 2026 found no other
+    proof of such a statement; beyond that search, novelty is unknown.
+acknowledgements: >-
+  OpenAI supplied the upstream algebraic witness.

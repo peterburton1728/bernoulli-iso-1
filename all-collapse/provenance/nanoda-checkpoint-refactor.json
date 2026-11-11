@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-27",
+  "original_submission": "submissions/2026-10-25/lean",
+  "reason": "Stock NanoDa 0.4.19 overflows its worker stack checking the original monolithic Lucas-Lehmer definitional equality.",
+  "method": "340 opaque arithmetic checkpoints, each checking at most 64 Lucas-Lehmer iterations by Eq.refl, composed with a general proved go_add lemma.",
+  "exponent": 21701,
+  "iterations": 21699,
+  "block_length": 64,
+  "blocks": 340,
+  "final_block_length": 3,
+  "unchanged_statement_files": {
+    "Solution.lean": "f6403abfd14d0092c9fee2f64aae9af1cf34939efc2109e3479734a1390f1f00",
+    "Challenge.lean": "d6f2947448dfb8670deca3d7186379e83a448e07edce5687ea0737924acb05c1",
+    "CertifiedInput.lean": "1edf06963ad437a89ee762065b883744876a31bacb84087b891d918e77ddd537",
+    "BernoulliIso/FiniteBaseCertificate.lean": "42581c1ea6032b13321e9d57f9ac1595b800eddc8bb79378e373719734fc4e44"
+  },
+  "edits": {
+    "UpstreamFoundation.lean": {
+      "old_sha256": "761f029ab51b0b87dcbafdfcca62938d7b4d0605c8711440daed2acbb1e152ef",
+      "new_sha256": "e95ac5fd539e49ec4c4f1ff99417d06c882972ff01fd5dd0f91922af7c094c50"
+    },
+    "BernoulliIso/CheckpointPrimeCertificate.lean": {
+      "new_sha256": "15e031c6ab2bf504ae97f5f501eb064cd39dcc5461f03552dc7a67812d137047"
+    }
+  },
+  "elaborator_options": {
+    "maxRecDepth": 10000,
+    "exponentiation.threshold": 22000
+  },
+  "generator": "provenance/generate-checkpoint-certificate.py",
+  "kernel_trust": "No new axioms. Every generated residue is checked by the kernels; correctness does not depend on trusting Python.",
+  "previous_records": "Existing upstream and release transformation manifests describe the 2026-10-25 baseline. Apply this separate record afterwards."
+}

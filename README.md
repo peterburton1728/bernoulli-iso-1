@@ -6,7 +6,9 @@ This repository holds two Lean 4 developments and an expository note.
 
 Folder [all-collapse/](all-collapse/). There is a countable group G such that the Bernoulli shifts of G over any two standard probability spaces, neither of which is a point mass, are isomorphic: there is an equivariant, measure-preserving bijection, measurable in both directions, between shift-invariant measurable sets of full measure. The bases may have different entropy, finite or infinite.
 
-The statement, its context, an outline of the proof and its limits are in [all-collapse/README.md](all-collapse/README.md). This development is prepared for submission to the Palomar registry; a registration, once made, is recorded in a later version of this file.
+The statement, its context, an outline of the proof and its limits are in [all-collapse/README.md](all-collapse/README.md). Registered on 12 November 2026 (UTC) as [PALOMAR-2026-11-12-000001, version 1](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-12-000001&version=1). The exact registered source commit is `a8df55ed454edfc197296f98155d67a49f3e5eed`, released as [v2.0.0](https://github.com/peterburton1728/bernoulli-iso-1/releases/tag/v2.0.0). Palomar's mechanical verification passed, including Lean kernel checking and independent NanoDa replay, and its automated editorial review identified no problems. This is automated verification and review, not human peer review. Later updates on the main branch are not part of that verified snapshot.
+
+As of 11 November 2026 a human-facing version of these results is actively being prepared as part of the upcoming article "Lossless undersampling by the coprime Radon transform: nonsoficity and paradoxical ergodic theory" by Peter Burton with AI assistance.
 
 ## 2. Finite uniform Bernoulli shifts with unequal base entropy
 
